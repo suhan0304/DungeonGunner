@@ -7,6 +7,12 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
 {
     private GUIStyle roomNodeStyle;
 
+    //Node layout Values
+    private const float nodeWidth = 160f;
+    private const float nodeHeight = 75f;
+    private const int nodePadding = 25;
+    private const int nodeBorder = 12;
+
     [MenuItem("Room Node Graph Editor", menuItem = "Window/Dungeon Editor/Room Node Graph Editor")]
 
     private static void OpenWindow()
@@ -27,6 +33,6 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
     /// Draw Editor GUI
     private void OnGUI() 
     {
-
+        GUILayout.BeginArea(new Rect(new Vector2(100f, 100f), new Vector2(nodeWidth, nodeHeight)), roomNodeStyle);
     }
 }
