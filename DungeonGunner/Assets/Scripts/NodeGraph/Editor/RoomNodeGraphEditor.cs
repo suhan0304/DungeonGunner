@@ -13,8 +13,8 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
     }
 
     /// Draw Editor GUI
-    private void OnGUI()
+    private void OnGUI() 
     {
-        Debug.Log("OnGUI has been called");
+
     }
 }
