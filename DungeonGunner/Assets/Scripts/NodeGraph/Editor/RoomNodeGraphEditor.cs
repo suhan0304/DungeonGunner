@@ -36,5 +36,9 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         GUILayout.BeginArea(new Rect(new Vector2(100f, 100f), new Vector2(nodeWidth, nodeHeight)), roomNodeStyle);
         EditorGUILayout.LabelField("Node 1");
         GUILayout.EndArea();
+
+        GUILayout.BeginArea(new Rect(new Vector2(300f, 300f), new Vector2(nodeWidth, nodeHeight)), roomNodeStyle);
+        EditorGUILayout.LabelField("Node 1");
+        GUILayout.EndArea();
     }
 }
