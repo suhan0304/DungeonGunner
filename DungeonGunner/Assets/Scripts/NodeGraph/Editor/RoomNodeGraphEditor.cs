@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using Codice.Client.Common.GameUI;
 
 public class RoomNodeGraphEditor : EditorWindow //편집기
 {
@@ -12,4 +11,6 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
     {
         GetWindow<RoomNodeGraphEditor>("Room Node Graph Editor");
     }
+
+
 }
