@@ -35,7 +35,7 @@ public class RoomNodeTypeSO : ScriptableObject
     #region Header
     [Header("One Type Should Be None (Unassigned)")]
     #endregion Header
-    public bool isCorridorNS = true;
+    public bool isNone = true;
 
 
 
