@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HelperUtilities
@@ -34,7 +35,13 @@ public class HelperUtilities
                 count++;
             }
         }
-    }
 
-    
+        if(count == 0)
+        {
+            Debug.Log(fieldName + " has no values in object " + thisObject.name.ToString());
+            error = true;
+        }
+
+        return error;   
+    }
 }
