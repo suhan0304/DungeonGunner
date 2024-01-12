@@ -6,7 +6,12 @@ using UnityEngine;
 public class HelperUtilities
 {
     /// <summary>
-    /// Empty String Debug check - 문자열(stringToCheck)이 공백이면 Log 출력하고 True 리턴해주는 검사기
+    /// Empty String Debug check 
+    /// 문자열(stringToCheck)이 공백인지 확인하는 유효성 검사
+    /// </summary>
+    /// <param name="thisObject"></param>
+    /// <param name="fieldName"></param>
+    /// <param name="stringToCheck"></param>
     /// <returns></returns>
     public static bool ValidateCheckEmptyString(Object thisObject, string fieldName, string stringToCheck)
     {
@@ -18,6 +23,14 @@ public class HelperUtilities
         return false;
     }
 
+    /// <summary>
+    /// list empty or contains null value check - returns true if there is an error
+    /// 리스트가 비어있거나 null value가 있는지 확인하는 유효성 검사
+    /// </summary>
+    /// <param name="thisObject"></param>
+    /// <param name="fieldName"></param>
+    /// <param name="enumerableObjectToCheck"></param>
+    /// <returns></returns>
     public static bool ValidateCheckEnumerableValues(Object thisObject, string fieldName, IEnumerable enumerableObjectToCheck)
     {
         bool error = false;
