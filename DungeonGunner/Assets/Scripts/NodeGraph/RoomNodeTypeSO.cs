@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "RoomNodeType", menuName = "Scriptable Objects/Dungeon/Room Node Type")]
@@ -12,13 +13,13 @@ public class RoomNodeTypeSO : ScriptableObject
     #endregion Header
     public bool displayInNodeGraphEditor = true;
     #region Header
-    [Header("Only flag the RoomNodeTypes that should be visible in the editor")]
+    [Header("One Type Should Be A Corridor")]
     #endregion Header
-    public bool displayInNodeGraphEditor = true;
+    public bool isCorridor = true;
     #region Header
-    [Header("Only flag the RoomNodeTypes that should be visible in the editor")]
+    [Header("One Type Should Be A CorridorNS")]
     #endregion Header
-    public bool displayInNodeGraphEditor = true;
+    public bool isCorridorNS = true;
     #region Header
     [Header("Only flag the RoomNodeTypes that should be visible in the editor")]
     #endregion Header
