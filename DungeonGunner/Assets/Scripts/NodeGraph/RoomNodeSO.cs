@@ -11,3 +11,4 @@ public class RoomNodeSO : ScriptableObject
     public RoomNodeTypeSO roomNodeType;
     [HideInInspector] public RoomNodeTypeListSO roomNodeTypeList;
 }
+
