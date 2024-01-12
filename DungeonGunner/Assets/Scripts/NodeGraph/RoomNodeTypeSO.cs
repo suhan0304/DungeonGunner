@@ -21,21 +21,21 @@ public class RoomNodeTypeSO : ScriptableObject
     #endregion Header
     public bool isCorridorNS = true;
     #region Header
-    [Header("Only flag the RoomNodeTypes that should be visible in the editor")]
+    [Header("One Type Should Be A CorridorEW")]
     #endregion Header
-    public bool displayInNodeGraphEditor = true;
+    public bool isCorridorEW = true;
     #region Header
-    [Header("Only flag the RoomNodeTypes that should be visible in the editor")]
+    [Header("One Type Should Be A Entrance")]
     #endregion Header
-    public bool displayInNodeGraphEditor = true;
+    public bool isEntrance = true;
     #region Header
-    [Header("Only flag the RoomNodeTypes that should be visible in the editor")]
+    [Header("One Type Should Be A Boss Room")]
     #endregion Header
-    public bool displayInNodeGraphEditor = true;
+    public bool isBossRoom = true;
     #region Header
-    [Header("Only flag the RoomNodeTypes that should be visible in the editor")]
+    [Header("One Type Should Be None (Unassigned)")]
     #endregion Header
-    public bool displayInNodeGraphEditor = true;
+    public bool isCorridorNS = true;
 
 
 
