@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 122184ba3782d76408a4dbf9b712526e, type: 3}
-  m_Name: RoomNodeType_ChestRoom
+  m_Name: RoomNodeType_CorridorNS
   m_EditorClassIdentifier: 
-  roomNodeTypeName: Chest Room
-  displayInNodeGraphEditor: 1
+  roomNodeTypeName: Corridor NS
+  displayInNodeGraphEditor: 0
   isCorridor: 0
-  isCorridorNS: 0
+  isCorridorNS: 1
   isCorridorEW: 0
   isEntrance: 0
   isBossRoom: 0
