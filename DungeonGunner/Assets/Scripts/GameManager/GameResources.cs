@@ -17,4 +17,15 @@ public class GameResources : MonoBehaviour
             return instance;
         }
     }
+
+    #region Header DUNGEON
+    [Space(10)]
+    [Header("DUNGEON")]
+    #endregion
+    #region Tooltip
+    [Tooltip("Populate with the dungeon RoomNodeTypeListSO")]
+    #endregion
+
+    public RoomNodeTypeListSO roomNodeTypeList;
+
 }
