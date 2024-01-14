@@ -56,6 +56,9 @@ public class RoomNodeSO : ScriptableObject
         GUILayout.EndArea();
     }
 
+    /// <summary>
+    /// Populate a string array with the room node types to display that can be selected
+    /// </summary>
     public string[] GetRoomNodeTypeToDisplay()
     {
         string[] roomArray = new string[roomNodeTypeList.list.Count];
