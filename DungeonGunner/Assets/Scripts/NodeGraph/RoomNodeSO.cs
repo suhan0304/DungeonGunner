@@ -107,7 +107,7 @@ public class RoomNodeSO : ScriptableObject
     /// </summary>
     private void ProcessMouseDownEvent(Event currentEvent)
     {
-        //left click down
+        // If left click down
         if (currentEvent.button == 0)
         {
             ProcessLeftClickDownEvent();
@@ -128,8 +128,56 @@ public class RoomNodeSO : ScriptableObject
         }
         else
         {
-            isSeleced = true;
+            isSelected = true;
         }
+    }
+
+
+    /// <summary>
+    /// Process mouse up events
+    /// </summary>
+    private void ProcessMouseUpEvent(Event currentEvent)
+    {
+        // If left click up
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftClickUpEvent();
+        }
+    }
+
+    /// <summary>
+    /// Process left click up event 
+    /// </summary>
+    private void ProcessLeftClickUpEvent()
+    {
+        if (isLeftClickDragging)
+        {
+            isLeftClickDragging = false;
+        }
+    }    
+    
+    
+    /// <summary>
+    /// Process mouse drag event
+    /// </summary>
+    private void ProcessMouseDragEvent(Event currentEvent)
+    {
+        // process left click drag event
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftMouseDragEvent();
+        }
+    }
+
+    /// <summary>
+    /// Process left mouse drag event 
+    /// </summary>
+    private void ProcessLeftMouseDragEvent(Event currentEvent)
+    {
+        isLeftClickDragging = true;
+
+        DragNode(currentEvent.delta);
+        GUI.changed = true;
     }
 
 #endif
