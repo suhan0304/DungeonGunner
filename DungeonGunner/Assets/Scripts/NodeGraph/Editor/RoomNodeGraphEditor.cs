@@ -82,12 +82,15 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
             currentRoomNode = IsMouseOverRoomNode(currentEvent);
         }
 
+        // if mouse isn't over a room node
         if (currentRoomNode == null)
         {
             ProcessRoomNodeGraphEvents(currentEvent);
         }
+        // else process room node events
         else
         {
+            // process room node events
             currentRoomNode.ProcessEvents(currentEvent);
         }
     }
