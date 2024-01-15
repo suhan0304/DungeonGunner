@@ -9,6 +9,7 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
 {
     private GUIStyle roomNodeStyle;
     private static RoomNodeGraphSO currentRoomNodeGraph;
+    private RoomNodeSO currentRoomNode = null;
     private RoomNodeTypeListSO roomNodeTypeList;
 
     //Node layout Values
