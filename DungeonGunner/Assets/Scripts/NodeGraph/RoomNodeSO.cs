@@ -114,6 +114,24 @@ public class RoomNodeSO : ScriptableObject
         }
     }
 
+    /// <summary>
+    /// Process left click down event 
+    /// </summary>
+    private void ProcessLeftClickDownEvent()
+    {
+        Selection.activeObject = this;
+
+        // Toggle node selection
+        if(isSelected == true)
+        {
+            isSelected = false;
+        }
+        else
+        {
+            isSeleced = true;
+        }
+    }
+
 #endif
     #endregion Editor COde
 }
