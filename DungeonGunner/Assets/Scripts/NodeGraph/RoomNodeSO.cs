@@ -75,20 +75,26 @@ public class RoomNodeSO : ScriptableObject
         return roomArray;
     }
 
+    /// <summary>
+    /// Process events for the node
+    /// </summary>
     public void ProcessEvents(Event currentEvent)
     {
         switch(currentEvent.type)
         {
+            // Process Mouse Down Events
             case EventType.MouseDown:
                 ProcessMouseDownEvent(currentEvent);
                 break;
 
-            case EventType.MouseDown:
-                ProcessMouseDownEvent(currentEvent);
+            // Process Mouse Up Events
+            case EventType.MouseUp:
+                ProcessMouseUpEvent(currentEvent);
                 break;
 
-            case EventType.MouseDown:
-                ProcessMouseDownEvent(currentEvent);
+            // Process Mouse Drag Events
+            case EventType.MouseDrag:
+                ProcessMouseDragEvent(currentEvent);
                 break;
 
             default:
