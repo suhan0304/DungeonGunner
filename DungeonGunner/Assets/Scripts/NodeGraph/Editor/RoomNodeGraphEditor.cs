@@ -80,6 +80,9 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         ProcessRoomNodeGraphEvents(currentEvent);
     }
 
+    /// <summary>
+    /// Check to see to mouse is over a room node - if so then return the room node else return null
+    /// </summary>
     private RoomNodeSO IsMouseOverRoomNode(Event currentEvent)
     {
         for (int i = currentRoomNodeGraph.roomNodeList.Count - 1; i >= 0; i--)
