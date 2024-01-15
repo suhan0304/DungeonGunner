@@ -20,6 +20,7 @@ public class RoomNodeSO : ScriptableObject
 
     [HideInInspector] public Rect rect;
     [HideInInspector] public bool isLeftClickDragging = false;
+    [HideInInspector] public bool isSelected = false;
 
     /// <summary>
     /// Initialise node
