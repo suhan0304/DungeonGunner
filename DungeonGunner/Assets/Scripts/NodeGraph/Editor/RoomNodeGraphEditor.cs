@@ -4,6 +4,7 @@ using UnityEditor.Callbacks;
 using Unity.VisualScripting;
 using UnityEditor.MPE;
 using System;
+using PlasticPipe.PlasticProtocol.Messages;
 
 public class RoomNodeGraphEditor : EditorWindow //편집기
 {
@@ -63,7 +64,7 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
         if (currentRoomNodeGraph != null)
         {
             // Process Events
-            ProcessEvent(Event.current);
+            ProcessEvents(Event.current);
 
             // Draw Room Nodes
             DrawRoomNodes();
@@ -73,7 +74,7 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
             Repaint();
     }
 
-    private void ProcessEvent(Event currentEvent)
+    private void ProcessEvents(Event currentEvent)
     {
         // Get room node that mouse is over if it's null or not currently being dragged
         if (currentRoomNode == null || currentRoomNode.isLeftClickDragging == false)
@@ -87,9 +88,8 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
         }
         else
         {
-
+            currentRoomNode.ProcessEvents(currentEvent);
         }
-        ProcessRoomNodeGraphEvents(currentEvent);
     }
 
     /// <summary>
