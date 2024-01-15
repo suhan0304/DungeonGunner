@@ -102,6 +102,18 @@ public class RoomNodeSO : ScriptableObject
         }
     }
 
+    /// <summary>
+    /// Process mouse down events
+    /// </summary>
+    private void ProcessMouseDownEvent(Event currentEvent)
+    {
+        //left click down
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftClickDownEvent();
+        }
+    }
+
 #endif
     #endregion Editor COde
 }
