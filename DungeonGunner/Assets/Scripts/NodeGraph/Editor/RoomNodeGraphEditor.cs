@@ -75,6 +75,8 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
 
     private void ProcessEvent(Event currentEvent)
     {
+        currentRoomNode = IsMouseOverRoomNode(currentEvent);
+
         ProcessRoomNodeGraphEvents(currentEvent);
     }
 
