@@ -165,7 +165,7 @@ public class RoomNodeSO : ScriptableObject
         // process left click drag event
         if (currentEvent.button == 0)
         {
-            ProcessLeftMouseDragEvent();
+            ProcessLeftMouseDragEvent(currentEvent);
         }
     }
 
@@ -179,6 +179,16 @@ public class RoomNodeSO : ScriptableObject
         DragNode(currentEvent.delta);
         GUI.changed = true;
     }
+
+    /// <summary>
+    /// Drag Node
+    /// </summary>
+    public void DragNode(Vector2 delta)
+    {
+        rect.position += delta;
+        EditorUtility.SetDirty(this);
+    }
+
 
 #endif
     #endregion Editor COde
