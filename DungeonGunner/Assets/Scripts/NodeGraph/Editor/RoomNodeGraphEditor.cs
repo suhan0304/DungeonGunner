@@ -83,6 +83,10 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
 
         if (currentRoomNode == null)
         {
+            ProcessRoomNodeGraphEvents(currentEvent);
+        }
+        else
+        {
 
         }
         ProcessRoomNodeGraphEvents(currentEvent);
