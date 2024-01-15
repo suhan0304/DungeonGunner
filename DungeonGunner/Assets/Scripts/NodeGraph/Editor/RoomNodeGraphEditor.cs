@@ -75,6 +75,7 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
 
     private void ProcessEvent(Event currentEvent)
     {
+        // Get room node that mouse is over if it's null or not currently being dragged
         currentRoomNode = IsMouseOverRoomNode(currentEvent);
 
         ProcessRoomNodeGraphEvents(currentEvent);
