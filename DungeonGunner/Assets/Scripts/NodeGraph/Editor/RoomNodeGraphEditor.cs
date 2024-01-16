@@ -216,6 +216,20 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         // if releasing the right mouse button and currently draggin a line
         if (currentEvent.button == 1 && currentRoomNodeGraph.roomNodeToDrawLineFrom != null)
         {
+            // Check if over a room node
+            RoomNodeSO roomNode = IsMouseOverRoomNode(currentEvent);
+
+            if (roomNode != null)
+            {
+                // if so set ift as a child of the parent room node if it can be added
+                if (currentRoomNodeGraph.roomNodeToDrawLineFrom.AddChildRoomNodeIDToRoomNode(roomNode.id))
+                {
+                    // Set parent ID in child room node
+                    roomNode.AddParentRoomNodeIDToRoomNode(currentRoomNodeGraph.roomNodeToDrawLineFrom.id);
+                }
+            }
+
+
             ClearLineDrag();
         }
     }
