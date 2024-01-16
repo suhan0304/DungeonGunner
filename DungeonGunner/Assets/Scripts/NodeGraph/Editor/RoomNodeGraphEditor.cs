@@ -19,6 +19,9 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
     private const int nodePadding = 25;
     private const int nodeBorder = 12;
 
+    // Connecting line values
+    private const float connectingLineWidth = 3f;
+
     [MenuItem("Room Node Graph Editor", menuItem = "Window/Dungeon Editor/Room Node Graph Editor")]
     private static void OpenWindow()
     {
@@ -63,6 +66,9 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
         // If a scriptable object of type RoomNodeGraphSo has been selected then process
         if (currentRoomNodeGraph != null)
         {
+            // Draw line if being dragged
+            DrawDraggedLine();
+
             // Process Events
             ProcessEvents(Event.current);
 
@@ -72,6 +78,16 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
 
         if (GUI.changed)
             Repaint();
+    }
+
+    private void DrawDraggedLine()
+    {
+        if (currentRoomNodeGraph.linePosition != Vector2.zero)
+        {
+            //Draw line from node to line position
+            Handles.DrawBezier(currentRoomNodeGraph.roomNodeToDrawLineFrom.rect.center, currentRoomNodeGraph.linePosition,
+                currentRoomNodeGraph.roomNodeToDrawLineFrom.rect.center, currentRoomNodeGraph.linePosition, Color.white, null, connectingLineWidth);
+        }
     }
 
     private void ProcessEvents(Event currentEvent)
