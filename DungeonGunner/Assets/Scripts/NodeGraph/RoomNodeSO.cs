@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class RoomNodeSO : ScriptableObject
 {
-    [HideInInspector] public string id;
+    public string id;
     public List<string> parentRoomNodeIDList = new List<string>();
     public List<string> childRoomNodeIDList = new List<string>();
     [HideInInspector] public RoomNodeGraphSO roomNodeGraph;
@@ -204,7 +204,23 @@ public class RoomNodeSO : ScriptableObject
         EditorUtility.SetDirty(this);
     }
 
+    /// <summary>
+    /// Add childID to the node (returns true if the node has been added, false otehrwise)
+    /// </summary>
+    public bool AddChildRoomNodeIDToRoomNode(string childID)
+    {
+        childRoomNodeIDList.Add(childID);
+        return true;
+    }
 
+    /// <summary>
+    /// Add parentID to the node (returns true if the node has been added, false otehrwise)
+    /// </summary>
+    public bool AddParentRoomNodeIDToRoomNode(string parentID)
+    {
+        parentRoomNodeIDList.Add(parentID);
+        return true;
+    }
 #endif
     #endregion Editor COde
 }
