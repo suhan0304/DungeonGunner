@@ -144,6 +144,11 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
                 ProcessMouseDragEvent(currentEvent);
                 break;
 
+            // Process Mouse Up Events
+            case EventType.MouseUp:
+                ProcessMouseUpEvent(currentEvent);
+                break;
+
             default:
                 break;
         }
@@ -201,6 +206,18 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
         AssetDatabase.AddObjectToAsset(roomNode, currentRoomNodeGraph);
 
         AssetDatabase.SaveAssets();
+    }
+
+    /// <summary>
+    /// Process mouse up event
+    /// </summary>
+    private void ProcessMouseUpEvent(Event currentEvent)
+    {
+        // if releasing the right mouse button and currently draggin a line
+        if (currentEvent.button == 1 && currentRoomNodeGraph.roomNodeToDrawLineFrom != null)
+        {
+            ClearLineDrag();
+        }
     }
 
     /// <summary>
