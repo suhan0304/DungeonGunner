@@ -253,6 +253,16 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
     }
 
     /// <summary>
+    /// Clear line drag from a room node
+    /// </summary>
+    private void ClearLineDrag()
+    {
+        currentRoomNodeGraph.roomNodeToDrawLineFrom = null;
+        currentRoomNodeGraph.linePosition = Vector2.zero;
+        GUI.changed = true;
+    }
+
+    /// <summary>
     /// Draw room nodes in the graph window
     /// </summary>
     private void DrawRoomNodes()
@@ -266,5 +276,4 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
         GUI.changed = true;
 
     }
-
 }
