@@ -212,6 +212,14 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
     }
 
     /// <summary>
+    /// Drag connecting line from room node
+    /// </summary>
+    public void DragConnectingLine(Vector2 delta)
+    {
+        currentRoomNodeGraph.linePosition += delta;
+    }
+
+    /// <summary>
     /// Draw room nodes in the graph window
     /// </summary>
     private void DrawRoomNodes()
