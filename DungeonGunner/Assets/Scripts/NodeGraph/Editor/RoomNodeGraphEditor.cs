@@ -21,6 +21,7 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
 
     // Connecting line values
     private const float connectingLineWidth = 3f;
+    private const float connectingLineArrowSize = 6f;
 
     [MenuItem("Room Node Graph Editor", menuItem = "Window/Dungeon Editor/Room Node Graph Editor")]
     private static void OpenWindow()
@@ -326,6 +327,12 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
         Vector2 arrowTailPoint1 = midPosition - new Vector2(-direction.y, direction.x).normalized * connectingLineArrowSize;
         Vector2 arrowTailPoint2 = midPosition + new Vector2(-direction.y, direction.x).normalized * connectingLineArrowSize;
 
+        // Calculate mid point offset position for arrow head
+        Vector2 arrowHeadPoint = midPosition + direction.normalized * connectingLineArrowSize;
+
+        // Draw Arrow
+        Handles.DrawBezier(arrowHeadPoint, arrowTailPoint1, arrowHeadPoint, arrowTailPoint1, Color.white, null, connectingLineWidth);
+        Handles.DrawBezier(arrowHeadPoint, arrowTailPoint2, arrowHeadPoint, arrowTailPoint2, Color.white, null, connectingLineWidth);
 
         // Draw line
         Handles.DrawBezier(startPosition, endPosition, startPosition, endPosition, Color.white, null, connectingLineWidth);
