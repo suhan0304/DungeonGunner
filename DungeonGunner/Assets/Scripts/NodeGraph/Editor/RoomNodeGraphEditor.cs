@@ -72,6 +72,9 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
             // Process Events
             ProcessEvents(Event.current);
 
+            // Draw Connections Between Room Nodes
+            DrawRoomConnections();
+
             // Draw Room Nodes
             DrawRoomNodes();
         }
@@ -206,6 +209,9 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
         AssetDatabase.AddObjectToAsset(roomNode, currentRoomNodeGraph);
 
         AssetDatabase.SaveAssets();
+
+        // Refresh graph node dictionary
+        currentRoomNodeGraph.OnValidate();
     }
 
     /// <summary>
@@ -275,6 +281,32 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
         currentRoomNodeGraph.linePosition = Vector2.zero;
         GUI.changed = true;
     }
+
+    /// <summary>
+    /// Draw connections in the graph window between room nodes
+    /// </summary>
+    private void DrawRoomConnections()
+    {
+        // Loop through all room nodes
+        foreach (RoomNodeSO roomNode in currentRoomNodeGraph.roomNodeList)
+        {
+            if (roomNode.childRoomNodeIDList.Count > 0)
+            {
+                // Loop Through child room nodes
+                foreach (string childRoomNodeID in roomNode.childRoomNodeIDList)
+                {
+                    //get child room node from dictionary
+                    if (currentRoomNodeGraph.roomNodeDictionary.ContainsKey(childRoomNodeID))
+                    {
+                        DrawConnectionLine(roomNode, currentRoomNodeGraph.roomNodeDictionary[childRoomNodeID]);
+
+                        GUI.changed = true;
+                    }
+                }
+            }
+        }
+    }
+
 
     /// <summary>
     /// Draw room nodes in the graph window
