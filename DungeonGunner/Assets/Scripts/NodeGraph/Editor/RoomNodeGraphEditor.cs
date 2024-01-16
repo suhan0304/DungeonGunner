@@ -307,6 +307,20 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         }
     }
 
+    /// <summary>
+    /// Draw connection line between the parent room node and child room node
+    /// </summary>
+    private void DrawConnectionLine(RoomNodeSO parentRoomNode, RoomNodeSO childRoomNode)
+    {
+        //get line start and end position
+        Vector2 startPosition = parentRoomNode.rect.center;
+        Vector2 endPosition = childRoomNode.rect.center;
+
+        // Draw line
+        Handles.DrawBezier(startPosition, endPosition, startPosition, endPosition, Color.white, null, connectingLineWidth);
+
+        GUI.changed = true;
+    }
 
     /// <summary>
     /// Draw room nodes in the graph window
