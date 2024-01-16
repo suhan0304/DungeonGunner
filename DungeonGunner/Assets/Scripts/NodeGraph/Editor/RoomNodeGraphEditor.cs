@@ -82,11 +82,12 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
             currentRoomNode = IsMouseOverRoomNode(currentEvent);
         }
 
-        // if mouse isn't over a room node
-        if (currentRoomNode == null)
+        // if mouse isn't over a room node or we are currently dragging a line from the room node thyen process graph events
+        if (currentRoomNode == null || currentRoomNodeGraph.roomNodeToDrawLineFrom != null)
         {
             ProcessRoomNodeGraphEvents(currentEvent);
         }
+
         // else process room node events
         else
         {
@@ -120,6 +121,11 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
             // Process Mouse Down Events
             case EventType.MouseDown:
                 ProcessMouseDownEvent(currentEvent);
+                break;
+
+            // Process Mouse Drag Events
+            case EventType.MouseDrag:
+                ProcessMouseDragEvent(currentEvent);
                 break;
 
             default:
