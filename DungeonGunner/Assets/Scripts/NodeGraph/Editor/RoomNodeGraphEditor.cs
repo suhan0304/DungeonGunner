@@ -192,7 +192,23 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
     /// </summary>
     private void ProcessMouseDragEvent(Event currentEvent)
     {
+        // process right click drag event - draw line
+        if (currentEvent.button == 1)
+        {
+            ProcessRightMouseDragEvent(currentEvent);
+        }
+    }
 
+    /// <summary>
+    /// Process right mouse drag event - draw line
+    /// </summary>
+    private void ProcessRightMouseDragEvent(Event currentEvent)
+    {
+        if (currentRoomNodeGraph.roomNodeToDrawLineFrom != null)
+        {
+            DragConnectingLine(currentEvent.delta);
+            GUI.changed = true;
+        }
     }
 
     /// <summary>
