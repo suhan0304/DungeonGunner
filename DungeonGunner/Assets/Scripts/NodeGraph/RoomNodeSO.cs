@@ -51,13 +51,16 @@ public class RoomNodeSO : ScriptableObject
             // Display a label that can't be changed
             EditorGUILayout.LabelField(roomNodeType.roomNodeTypeName);
         }
+        else
+        {
+            // Display a popup using the RoomNodeType name values that can be selected from (default to the currently set roomNodeType) 
+            int selected = roomNodeTypeList.list.FindIndex(x => x == roomNodeType);
 
-        // Display a popup using the RoomNodeType name values that can be selected from (default to the currently set roomNodeType) 
-        int selected = roomNodeTypeList.list.FindIndex(x => x == roomNodeType);
+            int selection = EditorGUILayout.Popup("", selected, GetRoomNodeTypeToDisplay());
 
-        int selection = EditorGUILayout.Popup("", selected, GetRoomNodeTypeToDisplay());
+            roomNodeType = roomNodeTypeList.list[selection];
 
-        roomNodeType = roomNodeTypeList.list[selection];
+        }
 
         if (EditorGUI.EndChangeCheck())
             EditorUtility.SetDirty(this);
