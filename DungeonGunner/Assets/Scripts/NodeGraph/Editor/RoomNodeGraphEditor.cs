@@ -235,6 +235,19 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         currentRoomNodeGraph.OnValidate();
     }
 
+    private void ClearAllSelectedRoomNodes()
+    {
+        foreach (RoomNodeSO roomNode in currentRoomNodeGraph.roomNodeList)
+        {
+            if (roomNode.isSelected)
+            {
+                roomNode.isSelected = false;
+
+                GUI.changed = true;
+            }
+        }
+    }
+
     /// <summary>
     /// Process mouse up event
     /// </summary>
