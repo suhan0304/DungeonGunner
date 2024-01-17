@@ -39,6 +39,8 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         roomNodeStyle.padding = new RectOffset(nodePadding, nodePadding, nodePadding, nodePadding);
         roomNodeStyle.border = new RectOffset(nodeBorder, nodeBorder, nodeBorder, nodeBorder);
 
+        // Define selected node style
+
         // Load Room Node types
         roomNodeTypeList = GameResources.Instance.roomNodeTypeList;
     }
