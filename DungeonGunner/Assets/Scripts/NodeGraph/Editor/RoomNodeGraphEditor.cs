@@ -9,6 +9,7 @@ using PlasticPipe.PlasticProtocol.Messages;
 public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
 {
     private GUIStyle roomNodeStyle;
+    private GUIStyle roomNodeSelectedStyle;
     private static RoomNodeGraphSO currentRoomNodeGraph;
     private RoomNodeSO currentRoomNode = null;
     private RoomNodeTypeListSO roomNodeTypeList;
