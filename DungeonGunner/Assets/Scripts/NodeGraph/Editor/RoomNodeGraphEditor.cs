@@ -176,13 +176,11 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         {
             ShowContextMenu(currentEvent.mousePosition);
         }
-
         // Process left click mouse down on graph event
         else if(currentEvent.button == 0)
         {
             ClearLineDrag();
-            ClearAllSelectedRoomnodes();
-
+            ClearAllSelectedRoomNodes();
         }
     }
 
