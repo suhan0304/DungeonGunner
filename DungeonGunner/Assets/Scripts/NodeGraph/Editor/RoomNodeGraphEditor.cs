@@ -40,6 +40,11 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         roomNodeStyle.border = new RectOffset(nodeBorder, nodeBorder, nodeBorder, nodeBorder);
 
         // Define selected node style
+        roomNodeStyle = new GUIStyle();
+        roomNodeStyle.normal.background = EditorGUIUtility.Load("node1") as Texture2D;
+        roomNodeStyle.normal.textColor = Color.white;
+        roomNodeStyle.padding = new RectOffset(nodePadding, nodePadding, nodePadding, nodePadding);
+        roomNodeStyle.border = new RectOffset(nodeBorder, nodeBorder, nodeBorder, nodeBorder);
 
         // Load Room Node types
         roomNodeTypeList = GameResources.Instance.roomNodeTypeList;
