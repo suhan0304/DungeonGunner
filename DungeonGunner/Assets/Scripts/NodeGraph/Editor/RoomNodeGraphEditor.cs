@@ -32,6 +32,9 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
 
     private void OnEnable()
     {
+        // Subscribe to the inspector selection changed event
+        Selection.selectionChanged += InspectorSelectionChanged;
+
         // Define node layout style
         roomNodeStyle = new GUIStyle();
         roomNodeStyle.normal.background = EditorGUIUtility.Load("node1") as Texture2D;
@@ -48,6 +51,12 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
 
         // Load Room Node types
         roomNodeTypeList = GameResources.Instance.roomNodeTypeList;
+        Selection.selectionChanged -= InspectorSelectionChanged;
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe from the inspector selection changed event
     }
 
     /// <summary>
