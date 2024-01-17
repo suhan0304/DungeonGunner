@@ -235,6 +235,9 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         currentRoomNodeGraph.OnValidate();
     }
 
+    /// <summary>
+    /// Clear selection from all room nodes
+    /// </summary>
     private void ClearAllSelectedRoomNodes()
     {
         foreach (RoomNodeSO roomNode in currentRoomNodeGraph.roomNodeList)
