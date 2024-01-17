@@ -362,6 +362,11 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         // Loop through all room nodes and draw them
         foreach (RoomNodeSO roomNode in currentRoomNodeGraph.roomNodeList)
         {
+            if (roomNode.isSelected)
+            {
+                roomNode.Draw(roomNodeSelectedStyle);
+            }
+
             roomNode.Draw(roomNodeStyle);
         }
 
