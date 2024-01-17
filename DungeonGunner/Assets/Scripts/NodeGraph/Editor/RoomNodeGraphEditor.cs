@@ -366,8 +366,10 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
             {
                 roomNode.Draw(roomNodeSelectedStyle);
             }
-
-            roomNode.Draw(roomNodeStyle);
+            else
+            {
+                roomNode.Draw(roomNodeStyle);
+            }
         }
 
         GUI.changed = true;
