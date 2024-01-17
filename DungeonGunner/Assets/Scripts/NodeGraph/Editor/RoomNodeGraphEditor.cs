@@ -404,6 +404,16 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         }
 
         GUI.changed = true;
+    }
 
+    private void InspectorSelectionChanged()
+    {
+        RoomNodeGraphSO roomNodeGraph = Selection.activeObject as RoomNodeGraphSO;
+
+        if (roomNodeGraph != null)
+        {
+            currentRoomNodeGraph = roomNodeGraph;
+            GUI.changed = true;
+        }
     }
 }
