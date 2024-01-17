@@ -59,7 +59,6 @@ public class RoomNodeSO : ScriptableObject
             int selection = EditorGUILayout.Popup("", selected, GetRoomNodeTypeToDisplay());
 
             roomNodeType = roomNodeTypeList.list[selection];
-
         }
 
         if (EditorGUI.EndChangeCheck())
