@@ -266,6 +266,10 @@ public class RoomNodeSO : ScriptableObject
         if (roomNodeGraph.GetRoomNode(childID).parentRoomNodeIDList.Count > 0)
             return false;
 
+        // If child is a corridor and this node is a corridor return false
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && roomNodeType.isCorridor)
+            return false;
+
     }
 
     /// <summary>
