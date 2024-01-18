@@ -287,6 +287,7 @@ public class RoomNodeSO : ScriptableObject
         if (!roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && childRoomNodeIDList.Count > 0)
             return false;
 
+        return true;
     }
 
     /// <summary>
