@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
 public class RoomNodeSO : ScriptableObject
@@ -268,6 +269,10 @@ public class RoomNodeSO : ScriptableObject
 
         // If child is a corridor and this node is a corridor return false
         if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && roomNodeType.isCorridor)
+            return false;
+
+        // If child is not a corridor and this node is not a corridor return false
+        if (!roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && !roomNodeType.isCorridor)
             return false;
 
     }
