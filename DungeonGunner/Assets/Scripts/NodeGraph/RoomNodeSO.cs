@@ -239,10 +239,33 @@ public class RoomNodeSO : ScriptableObject
         foreach (RoomNodeSO roomNode in roomNodeGraph.roomNodeList)
         {
             if (roomNode.roomNodeType.isBossRoom && roomNode.parentRoomNodeIDList.Count > 0)
-            {
                 isConnectedBossNodeAlready = true;
-            }
         }
+
+        // If the child node has a type of boss room and there is already a connected boss room node then return false
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isBossRoom && isConnectedBossNodeAlready)
+            return false;
+
+        // If the child node has a type of none then return false
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isNone)
+            return false;
+
+        // If the node already has a child with this child ID return false
+        if (childRoomNodeIDList.Contains(childID))
+            return false;
+
+        // If this node ID and the child ID are the same return false
+        if (id == childID)
+            return false;
+
+        // If this childID is already in the parentID list return false
+        if (parentRoomNodeIDList.Contains(childID))
+            return false;
+
+        // If the child node already has a parent return false
+        if (roomNodeGraph.GetRoomNode(childID).parentRoomNodeIDList.Count > 0)
+            return false;
+
     }
 
     /// <summary>
