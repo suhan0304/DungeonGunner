@@ -275,6 +275,10 @@ public class RoomNodeSO : ScriptableObject
         if (!roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && !roomNodeType.isCorridor)
             return false;
 
+        // If adding a corridor check that this node has < the maximum permitted child corridrs
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && childRoomNodeIDList.Count >= Settings.maxChildCorridors)
+            return false;
+
     }
 
     /// <summary>
