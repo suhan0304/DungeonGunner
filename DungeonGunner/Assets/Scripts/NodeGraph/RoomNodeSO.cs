@@ -279,6 +279,11 @@ public class RoomNodeSO : ScriptableObject
         if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && childRoomNodeIDList.Count >= Settings.maxChildCorridors)
             return false;
 
+        // If the child room is an entrance return false - the entrance must always be the top level parent node
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isEntrance)
+            return false;
+
+
     }
 
     /// <summary>
