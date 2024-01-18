@@ -225,6 +225,24 @@ public class RoomNodeSO : ScriptableObject
             childRoomNodeIDList.Add(childID);
             return true;
         }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Check the child node can be validy added to the parent node - return true if it can otherwise return false
+    /// </summary>
+    public bool IsChildRoomValid(string childID)
+    {
+        bool isConnectedBossNodeAlready = false;
+        // Check if there is there already a connected boss room in the node graph
+        foreach (RoomNodeSO roomNode in roomNodeGraph.roomNodeList)
+        {
+            if (roomNode.roomNodeType.isBossRoom && roomNode.parentRoomNodeIDList.Count > 0)
+            {
+                isConnectedBossNodeAlready = true;
+            }
+        }
     }
 
     /// <summary>
