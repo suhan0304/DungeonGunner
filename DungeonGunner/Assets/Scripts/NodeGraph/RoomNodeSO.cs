@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -218,8 +219,12 @@ public class RoomNodeSO : ScriptableObject
     /// </summary>
     public bool AddChildRoomNodeIDToRoomNode(string childID)
     {
-        childRoomNodeIDList.Add(childID);
-        return true;
+        // Check child node can be added validly to parent
+        if (IsChildRoomValid(childID))
+        {
+            childRoomNodeIDList.Add(childID);
+            return true;
+        }
     }
 
     /// <summary>
@@ -230,6 +235,7 @@ public class RoomNodeSO : ScriptableObject
         parentRoomNodeIDList.Add(parentID);
         return true;
     }
+
 #endif
     #endregion Editor COde
 }
