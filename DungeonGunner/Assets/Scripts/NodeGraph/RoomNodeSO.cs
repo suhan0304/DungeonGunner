@@ -283,6 +283,9 @@ public class RoomNodeSO : ScriptableObject
         if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isEntrance)
             return false;
 
+        // If adding a room to a corridor check that this corridor node doesn't already have a room added
+        if (!roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && childRoomNodeIDList.Count > 0)
+            return false;
 
     }
 
