@@ -264,7 +264,11 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
 
     private void SelectAllRoomNodes()
     {
-        forw
+        foreach (RoomNodeSO roomnode in currentRoomNodeGraph.roomNodeList)
+        {
+            roomnode.isSelected = true;
+        }
+        GUI.changed = true;
     }
 
     /// <summary>
