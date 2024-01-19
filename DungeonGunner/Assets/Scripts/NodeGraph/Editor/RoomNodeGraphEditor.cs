@@ -246,6 +246,9 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
         currentRoomNodeGraph.OnValidate();
     }
 
+    /// <summary>
+    /// Delete selected room nodes
+    /// </summary>
     private void DeleteSelectedRoomNodes()
     {
         Queue<RoomNodeSO> roomNodeDeletionQueue = new Queue<RoomNodeSO>();
