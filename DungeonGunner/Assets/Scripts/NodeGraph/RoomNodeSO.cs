@@ -299,6 +299,9 @@ public class RoomNodeSO : ScriptableObject
         return true;
     }
 
+    /// <summary>
+    /// Remove childID from the node (returns true if the node has been removed, false otherwise)
+    /// </summary>
     public bool RemoveChildRoomNodeIDFromRoomNode(string childID)
     {
         // if the node contatins the child ID then remove it
