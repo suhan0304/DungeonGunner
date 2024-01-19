@@ -262,6 +262,9 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         }
     }
 
+    /// <summary>
+    /// Select all room nodes
+    /// </summary>
     private void SelectAllRoomNodes()
     {
         foreach (RoomNodeSO roomnode in currentRoomNodeGraph.roomNodeList)
