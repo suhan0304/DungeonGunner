@@ -1,12 +1,9 @@
-using UnityEngine;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Callbacks;
-using Unity.VisualScripting;
-using UnityEditor.MPE;
-using System;
-using PlasticPipe.PlasticProtocol.Messages;
+using UnityEngine;
 
-public class RoomNodeGraphEditor : EditorWindow //편집기
+public class RoomNodeGraphEditor : UnityEditor.EditorWindow //편집기
 {
     private GUIStyle roomNodeStyle;
     private GUIStyle roomNodeSelectedStyle;
@@ -248,6 +245,12 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
         // Refresh graph node dictionary
         currentRoomNodeGraph.OnValidate();
     }
+
+    private void DeleteSelectedRoomNodes()
+    {
+        Queue<RoomNodeSO> roomNodeDeletionQueue = new Queue<RoomNodeSO>();
+    }
+
 
     /// <summary>
     /// Delete the links between the selected room nodes
