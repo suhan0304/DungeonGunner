@@ -299,7 +299,11 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
             // Remove node from list
             currentRoomNodeGraph.roomNodeList.Remove(roomNodeToDelete);
 
+            // Remove node from Asset database
+            DestroyImmediate(roomNodeToDelete, true);
 
+            // Save asset database
+            AssetDatabase.SaveAssets();
         }
     }
 
