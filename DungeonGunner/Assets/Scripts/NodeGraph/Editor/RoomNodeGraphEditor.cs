@@ -249,6 +249,28 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
     private void DeleteSelectedRoomNodes()
     {
         Queue<RoomNodeSO> roomNodeDeletionQueue = new Queue<RoomNodeSO>();
+
+        // Loop through all nodes
+        foreach (RoomNodeSO roomNode in currentRoomNodeGraph.roomNodeList)
+        {
+            if (roomNode.isSelected && !roomNode.roomNodeType.isEntrance)
+            {
+                roomNodeDeletionQueue.Enqueue(roomNode);
+
+                // iterate through child room nodes ids
+                foreach (string childRoomNodeID in roomNode.childRoomNodeIDList)
+                {
+                    // Retrieve child room node
+                    RoomNodeSO childRoomNode = currentRoomNodeGraph.GetRoomNode(childRoomNodeID);
+
+                    if (childRoomNode != null)
+                    {
+                        // Remove parentID from child room node
+                        childRoomNode.RemoveParentRoomNodeIDFromRoomNode(roomNode.id);
+                    }
+                }
+            }
+        }
     }
 
 
