@@ -269,6 +269,18 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
                         childRoomNode.RemoveParentRoomNodeIDFromRoomNode(roomNode.id);
                     }
                 }
+
+                foreach (string parentRoomNodeID in roomNode.parentRoomNodeIDList)
+                {
+                    // Retrieve parent node
+                    RoomNodeSO parentRoomNode = currentRoomNodeGraph.GetRoomNode(parentRoomNodeID);
+                    
+                    if (parentRoomNode != null)
+                    {
+                        // Remove childID from parent room node
+                        parentRoomNode.RemoveChildRoomNodeIDFromRoomNode(parentRoomNodeID);
+                    }
+                }
             }
         }
     }
