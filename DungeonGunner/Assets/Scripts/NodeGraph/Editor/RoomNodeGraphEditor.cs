@@ -249,6 +249,9 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
         currentRoomNodeGraph.OnValidate();
     }
 
+    /// <summary>
+    /// Delete the links between the selected room nodes
+    /// </summary>
     private void DeleteSelectedRoomNodeLinks()
     {
         // Iterate through all room nodes
