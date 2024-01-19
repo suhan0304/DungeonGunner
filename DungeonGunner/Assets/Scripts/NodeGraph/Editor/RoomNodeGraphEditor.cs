@@ -201,6 +201,8 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
         GenericMenu menu = new GenericMenu();
 
         menu.AddItem(new GUIContent("Create Room Node "), false, CreateRoomNode, mousePosition);
+        menu.AddSeparator("");
+        menu.AddItem(new GUIContent("Select All Room Nodes"), false, SelectAllRoomNodes);
 
         menu.ShowAsContext();
     }
@@ -259,6 +261,8 @@ public class RoomNodeGraphEditor : EditorWindow //편집기
             }
         }
     }
+
+
 
     /// <summary>
     /// Process mouse up event
