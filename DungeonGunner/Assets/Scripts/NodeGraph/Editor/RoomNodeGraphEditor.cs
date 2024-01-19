@@ -276,6 +276,9 @@ public class RoomNodeGraphEditor : EditorWindow //ÆíÁý±â
                 }
             }
         }
+
+        //Clear all selected room nodes
+        ClearAllSelectedRoomNodes();
     }
 
     /// <summary>
