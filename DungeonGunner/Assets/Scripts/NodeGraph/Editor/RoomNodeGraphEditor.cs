@@ -286,6 +286,15 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
                 }
             }
         }
+        
+        // Delete queued room nodes
+        while (roomNodeDeletionQueue.Count > 0)
+        {
+            // Get room node from queue
+            RoomNodeSO roomNodeToDelete = roomNodeDeletionQueue.Dequeue();
+
+
+        }
     }
 
 
