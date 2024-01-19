@@ -293,6 +293,12 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
             // Get room node from queue
             RoomNodeSO roomNodeToDelete = roomNodeDeletionQueue.Dequeue();
 
+            // Remove node from dictionary
+            currentRoomNodeGraph.roomNodeDictionary.Remove(roomNodeToDelete.id);
+
+            // Remove node from list
+            currentRoomNodeGraph.roomNodeList.Remove(roomNodeToDelete);
+
 
         }
     }
