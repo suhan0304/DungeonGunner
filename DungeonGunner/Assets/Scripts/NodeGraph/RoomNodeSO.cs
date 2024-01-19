@@ -312,15 +312,16 @@ public class RoomNodeSO : ScriptableObject
         }
         return false;
     }
+
     /// <summary>
-    /// Remove childID from the node (returns true if the node has been removed, false otherwise)
+    /// Remove parentID from the node (returns true if the node has been removed, false otherwise)
     /// </summary>
-    public bool RemoveChildRoomNodeIDFromRoomNode(string childID)
+    public bool RemoveParentRoomNodeIDFromRoomNode(string parentID)
     {
-        // if the node contatins the child ID then remove it
-        if (childRoomNodeIDList.Contains(childID))
+        // if the node contatins the parent ID then remove it
+        if (parentRoomNodeIDList.Contains(parentID))
         {
-            childRoomNodeIDList.Remove(childID);
+            parentRoomNodeIDList.Remove(parentID);
             return true;
         }
         return false;
