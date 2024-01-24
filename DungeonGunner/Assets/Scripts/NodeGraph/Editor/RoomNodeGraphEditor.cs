@@ -11,6 +11,9 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //편집기
     private RoomNodeSO currentRoomNode = null;
     private RoomNodeTypeListSO roomNodeTypeList;
 
+    private Vector2 graphOffset;
+    private Vector2 graphDrag;
+
     //Node layout Values
     private const float nodeWidth = 160f;
     private const float nodeHeight = 75f;
@@ -20,6 +23,10 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //편집기
     // Connecting line values
     private const float connectingLineWidth = 3f;
     private const float connectingLineArrowSize = 6f;
+
+    // Grid Spacing
+    private const float gridLarge = 100f;
+    private const float gridSmall = 25f;
 
     [MenuItem("Room Node Graph Editor", menuItem = "Window/Dungeon Editor/Room Node Graph Editor")]
     private static void OpenWindow()
@@ -110,6 +117,9 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //편집기
 
     private void ProcessEvents(Event currentEvent)
     {
+        // Reset graph drag
+        graphDrag = Vector2.zero;
+
         // Get room node that mouse is over if it's null or not currently being dragged
         if (currentRoomNode == null || currentRoomNode.isLeftClickDragging == false)
         {
