@@ -415,6 +415,10 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
             ProcessRightMouseDragEvent(currentEvent);
         }
         // process left click drag event - drag node graph
+        else if (currentEvent.button == 0)
+        {
+            ProcessLeftMouseDragEvent(currentEvent.delta);
+        }
     }
 
     /// <summary>
