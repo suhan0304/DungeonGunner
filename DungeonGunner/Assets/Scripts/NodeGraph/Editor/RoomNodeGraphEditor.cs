@@ -90,6 +90,7 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
         {
             // Draw Grid
             DrawBackgroundGrid(gridSmall, 0.2f, Color.gray);
+            DrawBackgroundGrid(gridLarge, 0.3f, Color.gray);
 
             // Draw line if being dragged
             DrawDraggedLine();
