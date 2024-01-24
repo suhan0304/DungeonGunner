@@ -88,6 +88,9 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
         // If a scriptable object of type RoomNodeGraphSo has been selected then process
         if (currentRoomNodeGraph != null)
         {
+            // Draw Grid
+            DrawBackgroundGrid(gridSmall, 0.2f, Color.gray);
+
             // Draw line if being dragged
             DrawDraggedLine();
 
