@@ -421,6 +421,18 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
         }
     }
 
+    private void ProcessLeftMouseDragEvent(Vector2 dragDelta)
+    {
+        graphDrag = dragDelta;
+
+        for (int i = 0; i < currentRoomNodeGraph.roomNodeList.Count; i++)
+        {
+            currentRoomNodeGraph.roomNodeList[i].DragNode(dragDelta);
+        }
+
+
+    }
+
     /// <summary>
     /// Process right mouse drag event - draw line
     /// </summary>
