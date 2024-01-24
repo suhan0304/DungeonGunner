@@ -115,6 +115,7 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
     private void DrawBackgroundGrid(float gridSize, float gridOpacity, Color gridColor)
     {
         int verticalLineCount = Mathf.CeilToInt((position.width + gridSize) / gridSize);
+        int horizontalLineCount = Mathf.CeilToInt((position.height + gridSize) / gridSize);
     }
 
     private void DrawDraggedLine()
