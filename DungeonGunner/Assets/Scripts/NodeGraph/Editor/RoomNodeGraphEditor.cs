@@ -119,6 +119,8 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
 
         Handles.color = new Color(gridColor.r, gridColor.g, gridColor.b, gridOpacity);
 
+        graphOffset += graphDrag * 0.5f;
+
 
     }
 
