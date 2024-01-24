@@ -114,9 +114,8 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
     /// </summary>
     private void DrawBackgroundGrid(float gridSize, float gridOpacity, Color gridColor)
     {
-
+        int verticalLineCount = Mathf.CeilToInt((position.width + gridSize) / gridSize);
     }
-
 
     private void DrawDraggedLine()
     {
