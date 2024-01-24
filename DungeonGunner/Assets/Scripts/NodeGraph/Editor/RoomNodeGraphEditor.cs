@@ -421,6 +421,9 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //편집기
         }
     }
 
+    /// <summary>
+    /// Process left mouse drag event - drag room node graph
+    /// </summary>
     private void ProcessLeftMouseDragEvent(Vector2 dragDelta)
     {
         graphDrag = dragDelta;
@@ -430,7 +433,7 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //편집기
             currentRoomNodeGraph.roomNodeList[i].DragNode(dragDelta);
         }
 
-
+        GUI.changed = true;
     }
 
     /// <summary>
