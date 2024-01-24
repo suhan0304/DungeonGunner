@@ -116,6 +116,10 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
     {
         int verticalLineCount = Mathf.CeilToInt((position.width + gridSize) / gridSize);
         int horizontalLineCount = Mathf.CeilToInt((position.height + gridSize) / gridSize);
+
+        Handles.color = new Color(gridColor.r, gridColor.g, gridColor.b, gridOpacity);
+
+
     }
 
     private void DrawDraggedLine()
