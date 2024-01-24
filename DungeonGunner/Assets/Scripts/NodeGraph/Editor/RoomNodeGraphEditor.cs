@@ -121,7 +121,7 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
 
         graphOffset += graphDrag * 0.5f;
 
-
+        Vector3 gridOffest = new Vector3(graphOffset.x % gridSize, graphOffset.y % gridSize, 0);
     }
 
     private void DrawDraggedLine()
