@@ -109,6 +109,9 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
             Repaint();
     }
 
+    /// <summary>
+    /// Draw a background grid for the room node graph editor
+    /// </summary>
     private void DrawBackgroundGrid(float gridSize, float gridOpacity, Color gridColor)
     {
 
