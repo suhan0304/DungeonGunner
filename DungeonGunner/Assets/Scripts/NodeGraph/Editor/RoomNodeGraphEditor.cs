@@ -128,7 +128,7 @@ public class RoomNodeGraphEditor : UnityEditor.EditorWindow //ÆíÁý±â
             Handles.DrawLine(new Vector3(gridSize * i, -gridSize, 0) + gridOffset, new Vector3(gridSize * i, position.height + gridSize, 0f) + gridOffset);
         }
 
-        for (int j = 0; j < verticalLineCount; j++)
+        for (int j = 0; j < horizontalLineCount; j++)
         {
             Handles.DrawLine(new Vector3(-gridSize, gridSize * j, 0) + gridOffset, new Vector3(position.height + gridSize, gridSize * j, 0f) + gridOffset);
         }
