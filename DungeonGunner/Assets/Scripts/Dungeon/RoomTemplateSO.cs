@@ -21,4 +21,20 @@ public class RoomTemplateSO : ScriptableObject
     #endregion Tooltip
 
     public GameObject prefab;
+
+    [HideInInspector] public GameObject previousPrefab; // this is used to regenrate the guid if the so is copied and the prefab is changed
+
+    [Space(10)]
+
+    #region Header ROOM CONFIGURATION
+
+    [Space(10)]
+    [Header("ROOM CONFIGURATION")]
+
+    #endregion Header Room CONFIGURATION
+
+    #region Tooltip
+
+    #endregion Tooltip
+
 }
