@@ -1,5 +1,7 @@
 using UnityEngine;
+[System.Serializable]
 
-public class Doorway : MonoBehaviour
-{
+public class Doorway
+{ 
+
 }
