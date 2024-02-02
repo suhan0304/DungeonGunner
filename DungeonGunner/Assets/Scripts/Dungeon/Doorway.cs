@@ -21,4 +21,10 @@ public class Doorway
     [Header("The heigt of tiles in the doorway to copy over")]
     #endregion
     public int doorwayCopyTileHeight;
+
+    [HideInInspector]
+    public bool isConnected = false;
+    [HideInInspector]
+    public bool isUnavailable = false;
+
 }
