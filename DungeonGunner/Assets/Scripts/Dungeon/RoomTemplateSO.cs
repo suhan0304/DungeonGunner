@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Room_", menuName = "Scriptable Objects/Dungeon/Room")]
@@ -86,4 +86,30 @@ public class RoomTemplateSO : ScriptableObject
     {
         return doorwayList;
     }
+
+    #region Validation
+
+#if UNITY_EDITOR
+
+    // Validate SO fields
+
+    private void OnValidate()
+    {
+        // Set unique GUID if empty or the prefab changes
+        if (guid == "" || previousPrefab != prefab)
+        {
+            guid = GUID.Generate().ToString();
+            previousPrefab = prefab;
+            EditorUtility.SetDirty(this);
+        }
+
+        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(doorwayList), doorwayList);
+
+        // Check spawn positions populated
+        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(spawnPositionArray), spawnPositionArray);
+    }
+
+#endif
+
+    #endregion Validation
 }
