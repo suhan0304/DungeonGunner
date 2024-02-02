@@ -40,4 +40,15 @@ public class RoomTemplateSO : ScriptableObject
 
     #endregion Tooltip
 
+    public RoomNodeTypeSO roomNodeType;
+
+    #region Tooltip
+
+    [Tooltip("If you imagine a rectangle around the room tilemap that just completely encloses it, the room lower bounds represent the bottom left corner of that rectangle." +
+        "This should be determined from the tilemap for the room (using the coordinate brush pointer to get the tilemap grid position for that bottom left corner" +
+        "(Note : this is the local tilemap position and NOT world position)")]
+
+    #endregion Tooltip
+
+    public Vector2Int lowerBounds;
 }
