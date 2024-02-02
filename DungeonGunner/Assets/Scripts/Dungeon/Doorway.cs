@@ -12,4 +12,9 @@ public class Doorway
     #endregion
     public Vector2Int doorwayStartCopyPosition;
 
+
+    #region Header
+    [Header("The width of tiles in the doorway to copy over")]
+    #endregion
+    public int doorwayCopyTileWidth;
 }
