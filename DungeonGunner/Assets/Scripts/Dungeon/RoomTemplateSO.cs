@@ -61,4 +61,21 @@ public class RoomTemplateSO : ScriptableObject
     #endregion Tooltip
 
     public Vector2Int upperBounds;
+
+    #region Tooltip
+
+    [Tooltip("There should be a maximum of four doorways for a room - one for each compass direction. " +
+        "These should have a consistent 3 tile opening size, with the middle tile position being the doorway coordinate 'position'")]
+
+    #endregion Tooltip
+
+    [SerializeField] public List<Doorway> doorwayList;
+
+    #region Tooltip
+
+    [Tooltip("Each possible spawn position (used for enemies and chests) for the room in tilemap coordinates should be added to this array")]
+
+    #endregion Tooltip
+
+    public Vector2Int[] spawnPositionArray;
 }
