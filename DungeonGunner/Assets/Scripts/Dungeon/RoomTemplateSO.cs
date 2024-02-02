@@ -78,4 +78,12 @@ public class RoomTemplateSO : ScriptableObject
     #endregion Tooltip
 
     public Vector2Int[] spawnPositionArray;
+
+    /// <summary>
+    /// Returns the list of Entrances for the room template
+    /// </summary>
+   public List<Doorway> GetDoorwayList()
+    {
+        return doorwayList;
+    }
 }
