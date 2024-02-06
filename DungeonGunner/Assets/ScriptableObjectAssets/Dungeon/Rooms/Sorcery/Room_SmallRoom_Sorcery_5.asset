@@ -19,7 +19,7 @@ MonoBehaviour:
   lowerBounds: {x: 3, y: -1}
   upperBounds: {x: 45, y: 41}
   doorwayList:
-  - position: {x: 24, y: 41}
+  - position: {x: 8, y: 53}
     orientation: 0
     doorPrefab: {fileID: 0}
     doorwayStartCopyPosition: {x: 21, y: 41}
