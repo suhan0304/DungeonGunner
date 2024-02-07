@@ -86,6 +86,15 @@ public class DungeonLevelSO : ScriptableObject
             Debug.Log("In " + this.name.ToString() + " : No Entrance Room Type Specified");
         }
 
+        // Loop through all node graphs
+        foreach (RoomNodeGraphSO roomNodeGraph in roomNodeGraphList)
+        {
+            if (roomNodeGraph == null)
+                return;
+
+
+        }
+
     }
 
 
