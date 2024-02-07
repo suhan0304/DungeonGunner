@@ -48,6 +48,17 @@ public class DungeonLevelSO : ScriptableObject
             return;
         if (HelperUtilities.ValidateCheckEnumerableValues(this, nameof(roomNodeGraphList), roomNodeGraphList))
             return;
+
+        // Check to make sure that room templates are specified for all the node types in the 
+        // specified node graphs
+
+        // First check that nortrth/south corridor, east/west corridor and entrance types have been specified
+        bool isEWCorridor = false;
+        bool isNSCorridor = false;
+        bool isEntrance = false;
+
+        
+
     }
 
 
