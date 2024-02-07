@@ -22,6 +22,10 @@ public class DungeonLevelSO : ScriptableObject
     [Header("ROOM TEMPLATES FOR LEVEL")]
     #endregion Header ROOM TEMPLATES FOR LEVEL
 
+    #region Tooltip
+    [Tooltip("Populate the list with the room templates that you want to be part of the level. You need to ensure that room templates are included for all room node types that are specified in the Room Node Graphs for the level.")]
+    #endregion Tooltip
+
     public List<RoomTemplateSO> roomTemplateList;
 
 }
