@@ -11,4 +11,10 @@ public class DungeonLevelSO : ScriptableObject
     [Header("BASIC LEVEL DETAILS")]
     #endregion Header BASIC LEVEL DETAILS
 
+    #region Tooltip
+    [Tooltip("The name for the level")]
+    #endregion Tooltip
+
+    public StringCollection levelName;
+
 }
