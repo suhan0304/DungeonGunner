@@ -92,7 +92,21 @@ public class DungeonLevelSO : ScriptableObject
             if (roomNodeGraph == null)
                 return;
 
+            // Loop throu all nodes in node graph
+            foreach (RoomNodeSO roomNodeSO in roomNodeGraph.roomNodeList)
+            {
+                if (roomNodeSO == null)
+                    continue;
 
+                // Check that a room template has been specified for each roomNode type
+
+                // Corridors and entrance already checked
+                if (roomNodeSO.roomNodeType.isEntrance || roomNodeSO.roomNodeType.isCorridorEW || roomNodeSO.roomNodeType.isCorridorNS ||
+                    roomNodeSO.roomNodeType.isCorridor || roomNodeSO.roomNodeType.isNone)
+                    continue;
+
+                bool isRoomNodeTypeFound = false;
+            }
         }
 
     }
