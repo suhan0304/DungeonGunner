@@ -71,6 +71,21 @@ public class DungeonLevelSO : ScriptableObject
                 isEntrance = true;
         }
 
+        if (isEWCorridor == false)
+        {
+            Debug.Log("In " + this.name.ToString() + " : No E/W Corridor Room Type Specified");
+        }
+
+        if (isNSCorridor == false)
+        {
+            Debug.Log("In " + this.name.ToString() + " : No N/S Corridor Room Type Specified");
+        }
+
+        if (isEntrance == false)
+        {
+            Debug.Log("In " + this.name.ToString() + " : No Entrance Room Type Specified");
+        }
+
     }
 
 
