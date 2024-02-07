@@ -35,4 +35,13 @@ public class DungeonLevelSO : ScriptableObject
     #endregion Tooltip
 
     public List<RoomNodeGraphSO> roomNodeGraphList;
+
+    #region Validation
+#if UNITY_EDITOR
+
+    // Validate scriptable object details eneterd
+
+
+#endif
+    #endregion Validation
 }
