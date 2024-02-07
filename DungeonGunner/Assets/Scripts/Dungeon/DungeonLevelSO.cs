@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DungeonLevel_", menuName = "Scriptable Objects/Dungeon/Dungeon Level")]
@@ -14,7 +15,7 @@ public class DungeonLevelSO : ScriptableObject
     [Tooltip("The name for the level")]
     #endregion Tooltip
 
-    public StringCollection levelName;
+    public string levelName;
 
     #region Header ROOM TEMPLATES FOR LEVEL
     [Space(10)]
@@ -40,6 +41,14 @@ public class DungeonLevelSO : ScriptableObject
 #if UNITY_EDITOR
 
     // Validate scriptable object details eneterd
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckEmptyString(this, nameof(levelName), levelName);
+        if (HelperUtilities.ValidateCheckEnumerableValues(this, nameof(roomTemplateList), roomTemplateList))
+            return;
+        if (HelperUtilities.ValidateCheckEnumerableValues(this, nameof(roomNodeGraphList), roomNodeGraphList))
+            return;
+    }
 
 
 #endif
