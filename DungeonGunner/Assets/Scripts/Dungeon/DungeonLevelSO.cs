@@ -106,6 +106,22 @@ public class DungeonLevelSO : ScriptableObject
                     continue;
 
                 bool isRoomNodeTypeFound = false;
+
+                // Loop though all room templates to check that this node type has been specified
+                foreach (RoomTemplateSO roomTemplateSO in roomTemplateList) 
+                {
+                    if (roomTemplateSO == null)
+                        continue;
+
+                    if (roomTemplateSO.roomNodeType == roomNodeSO.roomNodeType)
+                    {
+                        isRoomNodeTypeFound = true;
+                        break;
+                    }
+                }
+
+                if (!isRoomNodeTypeFound) 
+                    Debug.Log("In " + this.name.ToString() + " : No room template " + roomNodeSO.roomNodeType.name.ToString() + " found for node graph " + roomNodeGraph.name.ToString());
             }
         }
 
