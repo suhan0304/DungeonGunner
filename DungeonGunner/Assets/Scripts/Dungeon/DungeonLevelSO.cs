@@ -17,4 +17,11 @@ public class DungeonLevelSO : ScriptableObject
 
     public StringCollection levelName;
 
+    #region Header ROOM TEMPLATES FOR LEVEL
+    [Space(10)]
+    [Header("ROOM TEMPLATES FOR LEVEL")]
+    #endregion Header ROOM TEMPLATES FOR LEVEL
+
+    public List<RoomTemplateSO> roomTemplateList;
+
 }
