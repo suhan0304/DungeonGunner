@@ -11,4 +11,16 @@ public abstract class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBe
             return instance;
         }
     }
+
+    protected virtual void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this as T;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 }
