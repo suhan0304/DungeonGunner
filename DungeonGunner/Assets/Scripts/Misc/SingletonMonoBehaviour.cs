@@ -1,5 +1,5 @@
 using UnityEngine;
 
-public abstract class SingletonMonoBehaviour : MonoBehaviour
+public abstract class SingletonMonoBehaviour<T> : MonoBehaviour
 {
 }
