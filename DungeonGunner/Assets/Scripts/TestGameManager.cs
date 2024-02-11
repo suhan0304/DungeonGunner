@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestGameManager : MonoBehaviour
+public class TestGameManager : SingletonMonoBehaviour<TestGameManager>
 {
     // Start is called before the first frame update
     void Start()
