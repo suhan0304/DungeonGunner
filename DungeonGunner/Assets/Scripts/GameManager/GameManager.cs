@@ -26,6 +26,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     [SerializeField] private int currentDungeonLevelListIndex = 0;
 
+    [HideInInspector] public GameState gameState;
+
     // Start is called before the first frame update
     void Start()
     {
