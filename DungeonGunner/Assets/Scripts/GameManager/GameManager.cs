@@ -8,8 +8,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     #region Header DUNGEON LEVELS
     [Space(10)]
     [Header("DUNGEON LEVELS")]
-
     #endregion Header DUNGEON LEVELS
+
+    #region Tooltip
+
+    [Tooltip("Populate with the dungeon level scriptable objects")]
+
+    #endregion Tooltip
 
     // Start is called before the first frame update
     void Start()
