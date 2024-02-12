@@ -31,7 +31,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     // Start is called before the first frame update
     private void Start()
     {
-        
+        gameState = GameState.gameStarted;
     }
 
     // Update is called once per frame
@@ -41,7 +41,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
 
         // For testing
-        if ()
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            gameState = GameState.gameStarted;
+        }
     }
 
     /// <summary>
