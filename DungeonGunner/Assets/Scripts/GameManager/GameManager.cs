@@ -18,6 +18,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     [SerializeField] private List<DungeonLevelSO> dungeonLevelList;
 
+    #region Tooltip
+
+    [Tooltip("Populate with the dungeon level scriptable objects")]
+
+    #endregion Tooltip
+
+
     // Start is called before the first frame update
     void Start()
     {
