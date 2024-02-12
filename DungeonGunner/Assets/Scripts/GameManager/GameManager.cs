@@ -51,6 +51,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             case GameState.gameStarted:
                 // Play first level
                 PlayDungeonLevel(currentDungeonLevelListIndex);
+
+                break;
         }
 
     }
