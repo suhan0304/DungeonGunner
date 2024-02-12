@@ -43,8 +43,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     /// <summary>
     /// Handle game state
     /// </summary>
-   private void HandleGameState()
-   { 
+    private void HandleGameState()
+    {
         // Handle game state
         switch (gameState)
         {
@@ -52,6 +52,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
                 // Play first level
                 PlayDungeonLevel(currentDungeonLevelListIndex);
         }
-   
-   }
+
+    }
+
+    private void PlayDungeonLevel(int dungeonLevelListIndex)
+    {
+
+    }
 }
