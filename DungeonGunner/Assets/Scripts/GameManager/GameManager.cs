@@ -68,4 +68,16 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
 
     }
+
+    #region Validation
+#if UNITY_EDITOR
+
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(dungeonLevelList), dungeonLevelList);
+    }
+
+#endif
+    #endregion Validation
+
 }
