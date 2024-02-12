@@ -20,10 +20,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     #region Tooltip
 
-    [Tooltip("Populate with the dungeon level scriptable objects")]
+    [Tooltip("Populate with the starting dungeon level for testing , first level = 0")]
 
     #endregion Tooltip
 
+    [SerializeField] private int currentDungeonLevelListIndex = 0;
 
     // Start is called before the first frame update
     void Start()
