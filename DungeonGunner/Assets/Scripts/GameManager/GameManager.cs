@@ -39,4 +39,16 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         HandleGameState();
     }
+
+    /// <summary>
+    /// Handle game state
+    /// </summary>
+   private void HandleGameState()
+   { 
+        switch (gameState)
+        {
+
+        }
+   
+   }
 }
