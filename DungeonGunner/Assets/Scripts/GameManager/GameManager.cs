@@ -16,6 +16,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     #endregion Tooltip
 
+    [SerializeField] private List<DungeonLevelSO> dungeonLevelList;
+
     // Start is called before the first frame update
     void Start()
     {
