@@ -5,9 +5,11 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class GameManager : SingletonMonoBehaviour<GameManager> 
 {
-    #region Header DUNGEON LEVEL
+    #region Header DUNGEON LEVELS
+    [Space(10)]
+    [Header("DUNGEON LEVELS")]
 
-    #endregion Header DUNGEON LEVEL
+    #endregion Header DUNGEON LEVELS
 
     // Start is called before the first frame update
     void Start()
