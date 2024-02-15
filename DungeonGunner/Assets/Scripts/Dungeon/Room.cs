@@ -15,4 +15,5 @@ public class Room : MonoBehaviour
     public Vector2Int[] spawnPositionArray;
     public List<string> childRoomIDList;
     public string parentRoomID;
+    public List<Doorway> doorWayList;
 }
