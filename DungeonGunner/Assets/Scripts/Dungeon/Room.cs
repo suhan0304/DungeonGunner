@@ -11,4 +11,5 @@ public class Room : MonoBehaviour
     public Vector2Int lowerBounds;
     public Vector2Int upperBounds;
     public Vector2Int templateLowerBounds;
+    public Vector2Int templateUpperBounds;
 }
