@@ -9,4 +9,5 @@ public class Room : MonoBehaviour
     public GameObject prefab;
     public RoomNodeTypeSO roomNodeType;
     public Vector2Int lowerBounds;
+    public Vector2Int upperBounds;
 }
