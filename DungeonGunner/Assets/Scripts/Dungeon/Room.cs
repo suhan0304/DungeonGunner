@@ -20,5 +20,9 @@ public class Room : MonoBehaviour
     public bool isLit = false;
     public bool isPreviouslyVisited = false;
 
-
+    public Room()
+    {
+        childRoomIDList = new List<string>();
+        doorWayList = new List<Doorway>();
+    }
 }
