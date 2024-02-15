@@ -12,4 +12,5 @@ public class Room : MonoBehaviour
     public Vector2Int upperBounds;
     public Vector2Int templateLowerBounds;
     public Vector2Int templateUpperBounds;
+    public Vector2Int[] spawnPositionArray;
 }
