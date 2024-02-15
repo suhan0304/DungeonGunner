@@ -17,4 +17,6 @@ public class Room : MonoBehaviour
     public string parentRoomID;
     public List<Doorway> doorWayList;
     public InstantiatedRoom instatntiatedRoom;
+    public bool isLit = false;
+
 }
