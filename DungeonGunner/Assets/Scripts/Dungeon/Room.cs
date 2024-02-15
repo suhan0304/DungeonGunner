@@ -8,5 +8,5 @@ public class Room : MonoBehaviour
     public string templateID;
     public GameObject prefab;
     public RoomNodeTypeSO roomNodeType;
-
+    public Vector2Int lowerBounds;
 }
