@@ -18,5 +18,7 @@ public class Room : MonoBehaviour
     public List<Doorway> doorWayList;
     public InstantiatedRoom instatntiatedRoom;
     public bool isLit = false;
+    public bool isPreviouslyVisited = false;
+
 
 }
