@@ -1,18 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Lingq;
 using UnityEngine;
 
 public class DungeonBuilder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
