@@ -42,6 +42,14 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
         dungeonBuildSuccessful = false;
         int dungeonBuildAttempts = 0;
+
+        while (!dungeonBuildSuccessful && dungeonBuildAttempts < Settings.maxDungeonBuildAttempts)
+        {
+            dungeonBuildAttempts++;
+
+            // Select a random room node graph from the list
+            RoomNodeGraphSO roomNodeGraph = SelectRandomRoomNodeGraph(currentDungeonLevel.roomNodeGraphList);
+        }
     }
 
     /// <summary>
@@ -63,6 +71,19 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             {
                 Debug.Log("Duplicate Room Template Key In " + roomTemplateList);
             }
+        }
+    }
+
+    private RoomNodeGraphSO SelectRandomRoomNodeGraph(List<RoomNodeGraphSO> roomNodeGraphList)
+    {
+        if (roomNodeGraphList.Count > 0)
+        {
+            return roomNodeGraphList[UnityEngine.Random.Range(0, roomNodeGraphList.Count)];
+        }
+        else
+        {
+            Debug.Log("No room node graphs in list");
+            return null;
         }
     }
 }
