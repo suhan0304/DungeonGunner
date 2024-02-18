@@ -49,6 +49,16 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
             // Select a random room node graph from the list
             RoomNodeGraphSO roomNodeGraph = SelectRandomRoomNodeGraph(currentDungeonLevel.roomNodeGraphList);
+
+            int dungeonRebuildAttemptsForNodeGraph = 0;
+            dungeonBuildSuccessful = false;
+
+            // Loop until dungeon successfully built or more than max attempts for node graph
+            while (!dungeonBuildSuccessful && dungeonRebuildAttemptsForNodeGraph <= Settings.maxDungeonRebuildAttemptsForRoomGraph)
+            {
+                // Clear dungeon room gameobjects and dungeon room dictionary
+                ClearDungeon();
+            }
         }
     }
 
