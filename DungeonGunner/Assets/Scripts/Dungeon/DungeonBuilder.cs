@@ -47,6 +47,17 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         // Clear room template dictionary
         roomTemplateDictionary.Clear();
 
-
+        // Load room template list into dictionary
+        foreach (RoomTemplateSO roomTemplate in roomTemplateList)
+        {
+            if(!roomTemplateDictionary.ContainsKey(roomTemplate.guid))
+            {
+                roomTemplateDictionary.Add(roomTemplate.guid, roomTemplate);
+            }
+            else
+            {
+                Debug.Log("Duplicate Room Template Key In " + roomTemplateList);
+            }
+        }
     }
 }
