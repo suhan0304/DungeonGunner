@@ -42,6 +42,9 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
     }
 
+    /// <summary>
+    /// Load the room templates into the dictionary
+    /// </summary>
     private void LoadRoomTemplatesIntoDictionary()
     {
         // Clear room template dictionary
