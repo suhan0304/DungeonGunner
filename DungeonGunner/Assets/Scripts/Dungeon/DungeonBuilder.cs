@@ -107,6 +107,16 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
         // Add Entrance Node To Room Node Queue From Room Node Graph
         RoomNodeSO entranceNode = roomNodeGraph.GetRoomNode(roomNodeTypeList.list.Find(x => x.isEntrance));
+
+        if (entranceNode != null)
+        {
+            openRoomNodeQueue.Enqueue(entranceNode);
+        }
+        else
+        {
+            Debug.Log("No Entrance Node");
+            return false; // Dungeon Not Built
+        }
     }
 
     /// <summary>
