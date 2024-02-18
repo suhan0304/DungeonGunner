@@ -9,4 +9,5 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     private Dictionary<string, RoomTemplateSO> roomTemplateDictionary = new Dictionary<string, RoomTemplateSO>();
     private List<RoomTemplateSO> roomTemplateList = null;
     private RoomNodeTypeListSO roomNodeTypeList;
+    private bool dungeonBuildSuccessful;
 }
