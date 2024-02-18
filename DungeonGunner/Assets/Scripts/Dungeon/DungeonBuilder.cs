@@ -96,6 +96,20 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     }
 
     /// <summary>
+    /// Attempt to randomly build the dungeon for the specified room nodeGraph. Returns true if a 
+    /// successful random layout was generated, else returns false if a problem was encountered and
+    /// another attempt is required
+    /// </summary>
+    private bool AttemptToBuildRandomDungeon(RoomNodeGraphSO roomNodeGraph)
+    {
+        // Create Open Room Node Queue
+        Queue<RoomNodeSO> openRoomNodeQueue = new Queue<RoomNodeSO>();
+
+        // Add Entrance Node To Room Node Queue From Room Node Graph
+        RoomNodeSO entranceNode = roomNodeGraph.GetRoomNode(roomNodeTypeList.list.Find(x => x.isEntrance));
+    }
+
+    /// <summary>
     /// Select a random room node graph from the list of room node graphs
     /// </summary>
     private RoomNodeGraphSO SelectRandomRoomNodeGraph(List<RoomNodeGraphSO> roomNodeGraphList)
