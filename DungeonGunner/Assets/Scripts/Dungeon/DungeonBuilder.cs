@@ -40,6 +40,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         // Load the scriptable object room templates into the dictionary
         LoadRoomTemplatesIntoDictionary();
 
+        dungeonBuildSuccessful = false;
+        int dungeonBuildAttempts = 0;
     }
 
     /// <summary>
