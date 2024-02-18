@@ -117,6 +117,22 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             Debug.Log("No Entrance Node");
             return false; // Dungeon Not Built
         }
+
+        // Start with no room overlaps
+        bool noRoomOverlaps = true;
+
+        // Process open room nodes queue
+        noRoomOverlaps = ProcessRoomsInOpenRoomNodeQueue(roomNodeGraph, openRoomNodeQueue, noRoomOverlaps);
+
+        // If all the room nodes have been processed and there hasn't been a room overlap then return true
+        if (openRoomNodeQueue.Count == 0 && noRoomOverlaps)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /// <summary>
