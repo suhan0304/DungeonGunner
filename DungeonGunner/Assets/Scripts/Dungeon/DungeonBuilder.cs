@@ -29,4 +29,24 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     {
         roomNodeTypeList = GameResources.Instance.roomNodeTypeList; 
     }
+
+    /// <summary>
+    /// Generate random dungeon, returns true if dungeon built, flase is failed
+    /// </summary>
+    public bool GenerateDungeon(DungeonLevelSO currentDungeonLevel)
+    {
+        roomTemplateList = currentDungeonLevel.roomTemplateList;
+
+        // Load the scriptable object room templates into the dictionary
+        LoadRoomTemplatesIntoDictionary();
+
+    }
+
+    private void LoadRoomTemplatesIntoDictionary()
+    {
+        // Clear room template dictionary
+        roomTemplateDictionary.Clear();
+
+
+    }
 }
