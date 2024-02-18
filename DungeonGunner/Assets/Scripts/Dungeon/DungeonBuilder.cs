@@ -63,12 +63,12 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
                 // Attempt To Build A Random Dungeon For The Selected room node graph
                 dungeonBuildSuccessful = AttemptToBuildRandomDungeon(roomNodeGraph);
+            }
 
-                if (dungeonBuildSuccessful)
-                {
-                    // Instantiate Room Gameobjects
-                    InstantiateRoomGameobjects();
-                }
+            if (dungeonBuildSuccessful)
+            {
+                // Instantiate Room Gameobjects
+                InstantiateRoomGameobjects();
             }
         }
     }
