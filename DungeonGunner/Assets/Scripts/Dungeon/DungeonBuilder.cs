@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Lingq;
 using UnityEngine;
 
-public class DungeonBuilder : MonoBehaviour
+[DisallowMultipleComponent]
+public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 {
 }
