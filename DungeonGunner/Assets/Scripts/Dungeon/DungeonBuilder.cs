@@ -179,7 +179,11 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         // Loop through room template list
         foreach(RoomTemplateSO roomTemplate in roomTemplateList)
         {
-
+            // Add matching room templates
+            if (roomTemplate.roomNodeType == roomNodeType)
+            {
+                matchingRoomTemplateList.Add(roomTemplate);
+            }
         }
     }
 
