@@ -156,6 +156,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             if (roomNode.roomNodeType.isEntrance)
             {
                 RoomTemplateSO roomTemplate = GetRandomRoomTemplate(roomNode.roomNodeType);
+
+                Room room = CreateRoomFromRoomTemplate(roomTemplate, roomNode);
+
+
             }
 
         }
