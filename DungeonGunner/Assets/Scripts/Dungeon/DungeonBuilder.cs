@@ -159,7 +159,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
                 Room room = CreateRoomFromRoomTemplate(roomTemplate, roomNode);
 
-
+                room.isPositioned = true;
             }
 
         }
