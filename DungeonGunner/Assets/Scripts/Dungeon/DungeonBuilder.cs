@@ -185,6 +185,11 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                 matchingRoomTemplateList.Add(roomTemplate);
             }
         }
+
+        // Return null if list is zero
+        if (matchingRoomTemplateList.Count == 0)
+            return null;
+
     }
 
 
