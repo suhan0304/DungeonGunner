@@ -153,6 +153,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             }
 
             // if the room is the entrance mark as positioned and add to room dictionary
+            if (roomNode.roomNodeType.isEntrance)
+            {
+                RoomTemplateSO roomTemplate = GetRandomRoomTemplate(roomNode.roomNodeType);
+            }
 
         }
     }
