@@ -168,6 +168,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         }
     }
 
+    /// <summary>
+    /// Get a random room template from the roomtemplatelist that matches the roomType and return it
+    /// (return null if no mathing room templates found).
+    /// </summary>
     private RoomTemplateSO GetRandomRoomTemplate(RoomNodeTypeSO roomNodeType)
     {
 
