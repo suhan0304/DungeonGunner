@@ -141,7 +141,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     private bool ProcessRoomsInOpenRoomNodeQueue(RoomNodeGraphSO roomNodeGraph, Queue<RoomNodeSO> openRoomNodeQueue, bool noRoomsOverlaps) 
     {
         //While room nodes in open room node queue & no room overlaps detected.
-
+        while (openRoomNodeQueue.Count > 0 && noRoomsOverlaps == true) 
+        { 
+            // Get next room node from open room node queue.
+        }
     }
 
     /// <summary>
