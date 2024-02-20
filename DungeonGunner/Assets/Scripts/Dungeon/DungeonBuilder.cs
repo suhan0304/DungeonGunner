@@ -142,8 +142,15 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     {
         //While room nodes in open room node queue & no room overlaps detected.
         while (openRoomNodeQueue.Count > 0 && noRoomsOverlaps == true) 
-        { 
+        {
             // Get next room node from open room node queue.
+            RoomNodeSO roomNode = openRoomNodeQueue.Dequeue();
+
+            // Add child Nodes to queue from room node graph (with links to this parent Room) 
+            foreach (RoomNodeSO childRoomNode in roomNodeGraph.GetChildRoomNodes(roomNode))
+            {
+                openRoomNodeQueue.Enqueue(childRoomNode);
+            }
         }
     }
 
