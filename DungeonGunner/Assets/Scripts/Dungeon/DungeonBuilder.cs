@@ -174,7 +174,13 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     /// </summary>
     private RoomTemplateSO GetRandomRoomTemplate(RoomNodeTypeSO roomNodeType)
     {
+        List<RoomTemplateSO> matchingRoomTemplateList = new List<RoomTemplateSO>();
 
+        // Loop through room template list
+        foreach(RoomTemplateSO roomTemplate in roomTemplateList)
+        {
+
+        }
     }
 
 
