@@ -151,6 +151,9 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             {
                 openRoomNodeQueue.Enqueue(childRoomNode);
             }
+
+            // if the room is the entrance mark as positioned and add to room dictionary
+
         }
     }
 
