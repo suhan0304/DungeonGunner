@@ -194,8 +194,13 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         return matchingRoomTemplateList[UnityEngine.Random.Range(0, matchingRoomTemplateList.Count)];
     }
 
+    /// <summary>
+    /// Create room based on roomTemplate and layoutNode, and return the created room
+    /// </summary>
     private Room CreateRoomFromRoomTemplate(RoomTemplateSO roomTemplate, RoomNodeSO roomNode)
     {
+        // Initialise room from template
+        Room room = new Room();
 
     }
 
