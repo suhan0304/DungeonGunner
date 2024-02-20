@@ -194,6 +194,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         return matchingRoomTemplateList[UnityEngine.Random.Range(0, matchingRoomTemplateList.Count)];
     }
 
+    private Room CreateRoomFromRoomTemplate(RoomTemplateSO roomTemplate, RoomNodeSO roomNode)
+    {
+
+    }
 
     /// <summary>
     /// Select a random room node graph from the list of room node graphs
