@@ -27,7 +27,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     /// </summary>
     private void LoadRoomNodeTypeList()
     {
-        roomNodeTypeList = GameResources.Instance.roomNodeTypeList; 
+        roomNodeTypeList = GameResources.Instance.roomNodeTypeList;
     }
 
     /// <summary>
@@ -84,7 +84,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         // Load room template list into dictionary
         foreach (RoomTemplateSO roomTemplate in roomTemplateList)
         {
-            if(!roomTemplateDictionary.ContainsKey(roomTemplate.guid))
+            if (!roomTemplateDictionary.ContainsKey(roomTemplate.guid))
             {
                 roomTemplateDictionary.Add(roomTemplate.guid, roomTemplate);
             }
@@ -138,10 +138,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     /// <summary>
     /// Process rooms in the open room node queue, returning true if there are no room overlaps 
     /// </summary>
-    private bool ProcessRoomsInOpenRoomNodeQueue(RoomNodeGraphSO roomNodeGraph, Queue<RoomNodeSO> openRoomNodeQueue, bool noRoomsOverlaps) 
+    private bool ProcessRoomsInOpenRoomNodeQueue(RoomNodeGraphSO roomNodeGraph, Queue<RoomNodeSO> openRoomNodeQueue, bool noRoomsOverlaps)
     {
         //While room nodes in open room node queue & no room overlaps detected.
-        while (openRoomNodeQueue.Count > 0 && noRoomsOverlaps == true) 
+        while (openRoomNodeQueue.Count > 0 && noRoomsOverlaps == true)
         {
             // Get next room node from open room node queue.
             RoomNodeSO roomNode = openRoomNodeQueue.Dequeue();
@@ -160,10 +160,19 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                 Room room = CreateRoomFromRoomTemplate(roomTemplate, roomNode);
 
                 room.isPositioned = true;
+
+                // Add room to room dictionary
+                dungeonBuilderRoomDictionary.Add(room.id, room);
             }
 
         }
     }
+
+    private RoomTemplateSO GetRandomRoomTemplate(RoomNodeTypeSO roomNodeType)
+    {
+
+    }
+
 
     /// <summary>
     /// Select a random room node graph from the list of room node graphs
