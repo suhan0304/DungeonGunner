@@ -205,6 +205,13 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         room.templateID = roomTemplate.guid;
         room.id = roomNode.id;
         room.prefab = roomTemplate.prefab;
+        room.lowerBounds = roomTemplate.lowerBounds;
+        room.upperBounds = roomTemplate.upperBounds;
+        room.spawnPositionArray = roomTemplate.spawnPositionArray;
+        room.templateLowerBounds = roomTemplate.lowerBounds;
+        room.templateUpperBounds = roomTemplate.upperBounds;
+
+        room.childRoomIDList = CopyStringList(roomNode.childRoomNodeIDList);
 
     }
 
