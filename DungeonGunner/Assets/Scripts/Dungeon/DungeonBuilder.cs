@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -229,6 +230,18 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             Debug.Log("No room node graphs in list");
             return null;
         }
+    }
+
+    private List<string> CopyStringList(List<string> oldStringList)
+    {
+        List<string> newStringList = new List<string>();
+
+        foreach(string stringVale in oldStringList)
+        {
+            newStringList.Add(stringVale);
+        }
+
+        return newStringList;
     }
 
     /// <summary>
