@@ -19,6 +19,7 @@ public class Room : MonoBehaviour
     public InstantiatedRoom instatntiatedRoom;
     public bool isLit = false;
     public bool isPreviouslyVisited = false;
+    public bool isPositioned = false;
 
     public Room()
     {
