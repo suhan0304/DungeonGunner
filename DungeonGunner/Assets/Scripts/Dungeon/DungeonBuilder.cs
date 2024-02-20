@@ -190,6 +190,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         if (matchingRoomTemplateList.Count == 0)
             return null;
 
+        // Select random room template from list and return
+        return matchingRoomTemplateList[UnityEngine.Random.Range(0, matchingRoomTemplateList.Count)];
     }
 
 
