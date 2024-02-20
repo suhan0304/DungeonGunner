@@ -202,6 +202,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         // Initialise room from template
         Room room = new Room();
 
+        room.templateID = roomTemplate.guid;
+        room.id = roomNode.id;
+        room.prefab = roomTemplate.prefab;
+
     }
 
     /// <summary>
