@@ -135,9 +135,13 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         }
     }
 
+    /// <summary>
+    /// Process rooms in the open room node queue, returning true if there are no room overlaps 
+    /// </summary>
     private bool ProcessRoomsInOpenRoomNodeQueue(RoomNodeGraphSO roomNodeGraph, Queue<RoomNodeSO> openRoomNodeQueue, bool noRoomsOverlaps) 
     {
-    
+        //While room nodes in open room node queue & no room overlaps detected.
+
     }
 
     /// <summary>
