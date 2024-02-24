@@ -256,6 +256,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             newDoorway.position = doorway.position;
             newDoorway.orientation = doorway.orientation;
             newDoorway.doorPrefab = doorway.doorPrefab;
+            newDoorway.isConnected = doorway.isConnected;
+
         }
     }
 
