@@ -208,7 +208,6 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             // Get a random room template for room node that is consistent with the parent door orientation
             RoomTemplateSO roomtemplate = GetRandomTemplateForRoomConsistentWithParent(roomNode, doorwayParent);
         }
-
     }
 
     /// <summary>
