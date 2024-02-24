@@ -211,8 +211,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         room.spawnPositionArray = roomTemplate.spawnPositionArray;
         room.templateLowerBounds = roomTemplate.lowerBounds;
         room.templateUpperBounds = roomTemplate.upperBounds;
-
         room.childRoomIDList = CopyStringList(roomNode.childRoomNodeIDList);
+        room.doorWayList = CopyDoorWayList(roomTemplate.doorwayList);
 
     }
 
