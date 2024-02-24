@@ -259,6 +259,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             newDoorway.isConnected = doorway.isConnected;
             newDoorway.isUnavailable = doorway.isUnavailable;
             newDoorway.doorwayStartCopyPosition = doorway.doorwayStartCopyPosition;
+            newDoorway.doorwayCopyTileWidth = doorway.doorwayCopyTileWidth;
+            newDoorway.doorwayCopyTileHeight = doorway.doorwayCopyTileHeight;
         }
     }
 
