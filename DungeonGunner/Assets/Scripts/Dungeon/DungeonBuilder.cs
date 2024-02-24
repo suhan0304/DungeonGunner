@@ -200,6 +200,23 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
     }
 
+    /// <summary>
+    /// Get unconnected doorways
+    /// </summary>
+    /// <param name="roomDoorwayList"></param>
+    /// <returns></returns>
+    private IEnumerable<Doorway> GetUnconnectedAvailableDoorways(List<Doorway> roomDoorwayList)
+    {
+        // Loop through doorway list
+        foreach (Doorway doorway in roomDoorwayList)
+        {
+            if (!doorway.isConnected && !doorway.isUnavailable)
+            {
+                yield return doorway;
+            }
+        }
+    }
+
 
     /// <summary>
     /// Get a random room template from the roomtemplatelist that matches the roomType and return it
