@@ -186,6 +186,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     /// </summary>
     private bool CanPlaceRoomWithNoOverlaps(RoomNodeSO roomNode, Room parentRoom)
     {
+        // initialise and assume overlap until proven otherwise.
+        bool roomOverlaps = true;
+
+
 
     }
 
