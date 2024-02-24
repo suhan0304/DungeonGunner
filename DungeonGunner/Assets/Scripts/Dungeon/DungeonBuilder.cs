@@ -167,6 +167,11 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                 dungeonBuilderRoomDictionary.Add(room.id, room);
             }
 
+            // else if the room type isn't an entrance
+            else
+            {
+            }
+
         }
     }
 
