@@ -202,6 +202,11 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                 // If no more doorways to try then overlap failure.
                 return false; // room overlaps
             }
+
+            Doorway doorwayParent = unconnectedAbailableParentDoorways[UnityEngine.Random.Range(0, unconnectedAbailableParentDoorways.Count)];
+
+            // Get a random room template for room node that is consistent with the parent door orientation
+            RoomTemplateSO roomtemplate = GetRandomTemplateForRoomConsistentWithParent(roomNode, doorwayParent);
         }
 
     }
