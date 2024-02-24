@@ -203,8 +203,6 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     /// <summary>
     /// Get unconnected doorways
     /// </summary>
-    /// <param name="roomDoorwayList"></param>
-    /// <returns></returns>
     private IEnumerable<Doorway> GetUnconnectedAvailableDoorways(List<Doorway> roomDoorwayList)
     {
         // Loop through doorway list
