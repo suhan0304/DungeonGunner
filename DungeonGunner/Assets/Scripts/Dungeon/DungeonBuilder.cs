@@ -170,6 +170,11 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             // else if the room type isn't an entrance
             else
             {
+                // Else get parent room for node
+                Room parentRoom = dungeonBuilderRoomDictionary[roomNode.parentRoomNodeIDList[0]];
+
+                // See if room can be placed without overlaps
+                noRoomsOverlaps = CanPlaceRoomWithNoOverlaps(roomNode, parentRoom);
             }
 
         }
