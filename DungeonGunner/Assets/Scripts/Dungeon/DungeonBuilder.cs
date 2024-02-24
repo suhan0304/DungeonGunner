@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -246,6 +247,14 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
     private List<Doorway> CopyDoorwayList(List<Doorway> oldDoorwayList)
     {
+        List<Doorway> newDoorwayList = new List<Doorway>();
+
+        foreach (Doorway doorway in oldDoorwayList)
+        {
+            Doorway newDoorway = new Doorway();
+
+
+        }
     }
 
     /// <summary>
