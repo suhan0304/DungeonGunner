@@ -261,6 +261,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             newDoorway.doorwayStartCopyPosition = doorway.doorwayStartCopyPosition;
             newDoorway.doorwayCopyTileWidth = doorway.doorwayCopyTileWidth;
             newDoorway.doorwayCopyTileHeight = doorway.doorwayCopyTileHeight;
+
+            newDoorwayList.Add(newDoorway);
         }
     }
 
