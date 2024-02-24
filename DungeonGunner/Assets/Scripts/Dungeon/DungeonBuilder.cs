@@ -264,6 +264,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
             newDoorwayList.Add(newDoorway);
         }
+
+        return newDoorwayList;
     }
 
     /// <summary>
