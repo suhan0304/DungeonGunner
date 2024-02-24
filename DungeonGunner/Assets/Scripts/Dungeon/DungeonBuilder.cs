@@ -221,6 +221,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             room.parentRoomID = "";
             room.isPreviouslyVisited = true;
         }
+        else
+        {
+            room.parentRoomID = roomNode.parentRoomNodeIDList[0];
+        }
 
     }
 
