@@ -196,6 +196,12 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         {
             // Select random unconnected available doorway for Parent
             List<Doorway> unconnectedAbailableParentDoorways = GetUnconnectedAvailableDoorways(parentRoom.doorWayList).ToList();
+
+            if (unconnectedAbailableParentDoorways.Count == 0)
+            {
+                // If no more doorways to try then overlap failure.
+                return false; // room overlaps
+            }
         }
 
     }
