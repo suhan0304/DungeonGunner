@@ -226,6 +226,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             room.parentRoomID = roomNode.parentRoomNodeIDList[0];
         }
 
+        return room;
+
     }
 
     /// <summary>
