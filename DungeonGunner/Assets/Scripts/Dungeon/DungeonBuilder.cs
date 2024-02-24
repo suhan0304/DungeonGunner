@@ -176,9 +176,19 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                 // See if room can be placed without overlaps
                 noRoomsOverlaps = CanPlaceRoomWithNoOverlaps(roomNode, parentRoom);
             }
-
         }
+
+        return noRoomsOverlaps;
     }
+
+    /// <summary>
+    /// Attempt to place the room node in the dungeon - if room can be placed return the room, else return null
+    /// </summary>
+    private bool CanPlaceRoomWithNoOverlaps(RoomNodeSO roomNode, Room parentRoom)
+    {
+
+    }
+
 
     /// <summary>
     /// Get a random room template from the roomtemplatelist that matches the roomType and return it
