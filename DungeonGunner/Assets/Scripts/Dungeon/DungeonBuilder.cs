@@ -258,7 +258,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             newDoorway.doorPrefab = doorway.doorPrefab;
             newDoorway.isConnected = doorway.isConnected;
             newDoorway.isUnavailable = doorway.isUnavailable;
-
+            newDoorway.doorwayStartCopyPosition = doorway.doorwayStartCopyPosition;
         }
     }
 
