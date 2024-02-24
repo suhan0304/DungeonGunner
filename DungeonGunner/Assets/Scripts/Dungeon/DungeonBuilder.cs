@@ -213,7 +213,14 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         room.templateLowerBounds = roomTemplate.lowerBounds;
         room.templateUpperBounds = roomTemplate.upperBounds;
         room.childRoomIDList = CopyStringList(roomNode.childRoomNodeIDList);
-        room.doorWayList = CopyDoorWayList(roomTemplate.doorwayList);
+        room.doorWayList = CopyDoorwayList(roomTemplate.doorwayList);
+
+        // Set parnet ID for room
+        if (roomNode.parentRoomNodeIDList.Count == 0) // Entrance
+        {
+            room.parentRoomID = "";
+            room.isPreviouslyVisited = true;
+        }
 
     }
 
