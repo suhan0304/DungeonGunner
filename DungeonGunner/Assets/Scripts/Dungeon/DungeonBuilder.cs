@@ -189,7 +189,14 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         // initialise and assume overlap until proven otherwise.
         bool roomOverlaps = true;
 
+        // Do while Room Overlaps - try to place against all available doorways of the parent until
+        // the room is successfully placed without overlap.
 
+        while (roomOverlaps)
+        {
+            // Select random unconnected available doorway for Parent
+            List<Doorway> unconnectedAbailableParentDoorways = GetUnconnectedAvailableDoorways(parentRoom.doorWayList).ToList();
+        }
 
     }
 
