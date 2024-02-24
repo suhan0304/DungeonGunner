@@ -254,7 +254,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             Doorway newDoorway = new Doorway();
 
             newDoorway.position = doorway.position;
-            newDoorway.position = doorway.position;
+            newDoorway.orientation = doorway.orientation;
         }
     }
 
