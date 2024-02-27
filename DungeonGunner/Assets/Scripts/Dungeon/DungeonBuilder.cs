@@ -240,6 +240,11 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                     break;
             }
         }
+        //Else select random room template
+        else
+        {
+            
+        }
     }
 
     /// <summary>
