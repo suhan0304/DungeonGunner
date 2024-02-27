@@ -213,7 +213,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     /// <summary>
     /// Get random room template for room node taking into account the parent doorway orientation
     /// </summary>
-    private RoomTemplateSO GetRandomTemplateForRoomConsistentWithParent(RoomNodeSO roomNode, Doorway doorway)
+    private RoomTemplateSO GetRandomTemplateForRoomConsistentWithParent(RoomNodeSO roomNode, Doorway doorwayParent)
     {
         RoomTemplateSO roomtemplate = null;
 
@@ -221,7 +221,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         // parent doorway orientation
         if (roomNode.roomNodeType.isCorridor)
         {
+            switch (doorwayParent.orientation)
+            {
 
+            }
         }
     }
 
