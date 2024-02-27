@@ -265,6 +265,15 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     {
         // Get current room doorway position
         Doorway doorway = GetOppositeDoorway(doorwayPoint, room.doorWayList);
+
+        // Returns if no doorway in room opposite to parent doorway
+        if (doorway == null)
+        {
+            // Just mark the parnet doorway as unavailable so we don't try and connect it again
+            doorwayParent.isUnavailable = true;
+
+            return false;
+        }
     }
 
     /// <summary>
