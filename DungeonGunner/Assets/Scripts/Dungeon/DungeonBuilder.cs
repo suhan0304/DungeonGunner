@@ -219,6 +219,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
         // If room node is a corridor then select random correct Corridor room template based on
         // parent doorway orientation
+        if (roomNode.roomNodeType.isCorridor)
+        {
+
+        }
     }
 
     /// <summary>
