@@ -216,6 +216,9 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     private RoomTemplateSO GetRandomTemplateForRoomConsistentWithParent(RoomNodeSO roomNode, Doorway doorway)
     {
         RoomTemplateSO roomtemplate = null;
+
+        // If room node is a corridor then select random correct Corridor room template based on
+        // parent doorway orientation
     }
 
     /// <summary>
