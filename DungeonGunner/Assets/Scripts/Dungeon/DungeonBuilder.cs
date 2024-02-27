@@ -259,6 +259,14 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     }
 
     /// <summary>
+    /// Place the room - returns true if the room doesn't overlap, false otherwise
+    /// </summary>
+    private bool PlaceTheRoom()
+    {
+
+    }
+
+    /// <summary>
     /// Get unconnected doorways
     /// </summary>
     private IEnumerable<Doorway> GetUnconnectedAvailableDoorways(List<Doorway> roomDoorwayList)
