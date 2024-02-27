@@ -261,9 +261,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     /// <summary>
     /// Place the room - returns true if the room doesn't overlap, false otherwise
     /// </summary>
-    private bool PlaceTheRoom()
+    private bool PlaceTheRoom(Room parnetRoom, Doorway doorwayParent, Room room)
     {
-
+        // Get current room doorway position
+        Doorway doorway = GetOppositeDoorway(doorwayPoint, room.doorWayList);
     }
 
     /// <summary>
