@@ -211,6 +211,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             Room room = CreateRoomFromRoomTemplate(roomtemplate, roomNode);
 
             // Plcae the room - returns true if the room doesn't overlap
+            if (PlaceTheRoom(parentRoom, doorwayParent, room))
+            {
+
+            }
 
         }
     }
