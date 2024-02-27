@@ -233,6 +233,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                     roomtemplate = GetRandomRoomTemplate(roomNodeTypeList.list.Find(x => x.isCorridorEW));
                     break;
 
+                case Orientation.none:
+                    break;
             }
         }
     }
