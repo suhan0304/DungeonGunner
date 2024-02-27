@@ -243,7 +243,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         //Else select random room template
         else
         {
-            
+            roomtemplate = GetRandomRoomTemplate(roomNode.roomNodeType);
         }
     }
 
