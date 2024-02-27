@@ -211,6 +211,17 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     }
 
     /// <summary>
+    /// Get random room template for room node taking into account the parent doorway orientation
+    /// </summary>
+    /// <param name="roomNode"></param>
+    /// <param name="doorway"></param>
+    /// <returns></returns>
+    private RoomTemplateSO GetRandomTemplateForRoomConsistentWithParent(RoomNodeSO roomNode, Doorway doorway)
+    {
+
+    }
+
+    /// <summary>
     /// Get unconnected doorways
     /// </summary>
     private IEnumerable<Doorway> GetUnconnectedAvailableDoorways(List<Doorway> roomDoorwayList)
