@@ -227,8 +227,11 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                 case Orientation.south:
                     roomtemplate = GetRandomRoomTemplate(roomNodeTypeList.list.Find(x => x.isCorridorNS));
                     break;
+
                 case Orientation.east:
                 case Orientation.west:
+                    roomtemplate = GetRandomRoomTemplate(roomNodeTypeList.list.Find(x => x.isCorridorEW));
+                    break;
 
             }
         }
