@@ -279,6 +279,9 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         Vector2Int parentDoorwayPosition = parentRoom.lowerBounds + doorwayParent.position - parentRoom.templateLowerBounds;
 
         Vector2Int adjustment = Vector2Int.zero;
+
+        // Calculate adjustment position offset based on room doorway position that we are trying to connect
+        // (e.g. if this doorway is west then we need to add (1,0) to the east parent doorway)
     }
 
     /// <summary>
