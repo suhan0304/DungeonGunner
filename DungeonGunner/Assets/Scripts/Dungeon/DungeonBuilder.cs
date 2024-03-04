@@ -342,6 +342,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                 return doorwayToCheck;
             }
         }
+        return null;
     }
 
     /// <summary>
