@@ -261,7 +261,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     /// <summary>
     /// Place the room - returns true if the room doesn't overlap, false otherwise
     /// </summary>
-    private bool PlaceTheRoom(Room parnetRoom, Doorway doorwayParent, Room room)
+    private bool PlaceTheRoom(Room parentRoom, Doorway doorwayParent, Room room)
     {
         // Get current room doorway position
         Doorway doorway = GetOppositeDoorway(doorwayPoint, room.doorWayList);
@@ -276,6 +276,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         }
 
         // Calculate 'world' grid parent doorway position
+        Vector2Int parentDoorwayPosition = parentRoom.lowerBounds + doorwayParent.position - parentRoom.templateLowerBounds;
     }
 
     /// <summary>
