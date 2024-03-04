@@ -312,6 +312,9 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
         // Calculate room lower bounds and upper bounds based on positioning to aligh with parent doorway
         room.lowerBounds = parentDoorwayPosition + adjustment + room.templateLowerBounds - doorway.position;
+        room.upperBounds = room.lowerBounds + room.templateUpperBounds - room.templateLowerBounds;
+
+        
 
     }
 
