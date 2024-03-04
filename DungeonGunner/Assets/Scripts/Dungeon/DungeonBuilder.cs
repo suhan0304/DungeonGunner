@@ -357,7 +357,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
             // skip if same room as room to test or room hasn't been positioned
             if (room.id == roomToTest.id || !room.isPositioned)
-                continue;room
+                continue;
 
             // If room overlaps
             if (IsOverLapingRoom(roomToTest, room))
@@ -365,6 +365,9 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                 return room;
             }
         }
+
+        //Return
+        return null;
     }
 
     /// <summary>
