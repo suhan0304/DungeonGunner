@@ -314,7 +314,15 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         room.lowerBounds = parentDoorwayPosition + adjustment + room.templateLowerBounds - doorway.position;
         room.upperBounds = room.lowerBounds + room.templateUpperBounds - room.templateLowerBounds;
 
-        
+        Room overlappingRoom = CheckForRoomOverlap(room);
+
+    }
+
+    /// <summary>
+    /// Get the doorway from the doorway list that has the opposite orientation to doorway
+    /// </summary>
+    private Doorway GetOppositeDoorway(Doorway parentDoorway, List<Doorway> doorwayList)
+    {
 
     }
 
