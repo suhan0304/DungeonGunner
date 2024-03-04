@@ -316,6 +316,25 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
         Room overlappingRoom = CheckForRoomOverlap(room);
 
+        if (overlappingRoom == null)
+        {
+            // mark doorway as connected & unavailable
+            doorwayParent.isConnected = true;
+            doorwayParent.isUnavailable = true;
+
+            doorway.isConnected = true;
+            doorway.isUnavailable = true;
+
+            // return true to show rooms have been connected with no overlap
+            return true;
+        }
+        else
+        {
+            // Just mark the parent doorway as unavailable so we don't try and connect it again
+            doorwayParent.isUnavailable = true;
+
+            return false;
+        }
     }
 
     /// <summary>
