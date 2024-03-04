@@ -356,7 +356,14 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             Room room = keyvaluepair.Value;
 
             // skip if same room as room to test or room hasn't been positioned
-            if (Room.id == roomToTest.id || !Room.)
+            if (room.id == roomToTest.id || !room.isPositioned)
+                continue;
+
+            // If room overlaps
+            if (IsOverLapingRoom(roomToTest, room))
+            {
+                return room;
+            }
         }
     }
 
