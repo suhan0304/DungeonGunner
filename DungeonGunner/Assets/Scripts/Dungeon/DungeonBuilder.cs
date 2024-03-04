@@ -274,6 +274,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
             return false;
         }
+
+        // Calculate 'world' grid parent doorway position
     }
 
     /// <summary>
