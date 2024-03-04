@@ -329,7 +329,18 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             {
                 return doorwayToCheck;
             }
-            else 
+            else if (parentDoorway.orientation == Orientation.east && doorwayToCheck.orientation == Orientation.west)
+            {
+                return doorwayToCheck;
+            }
+            else if (parentDoorway.orientation == Orientation.east && doorwayToCheck.orientation == Orientation.west)
+            {
+                return doorwayToCheck;
+            }
+            else if (parentDoorway.orientation == Orientation.east && doorwayToCheck.orientation == Orientation.west)
+            {
+                return doorwayToCheck;
+            }
         }
     }
 
