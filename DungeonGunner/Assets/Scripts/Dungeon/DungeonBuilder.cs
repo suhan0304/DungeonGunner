@@ -285,7 +285,9 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
         switch(doorway.orientation)
         {
+            case Orientation.north:
 
+                break;
         }
     }
 
