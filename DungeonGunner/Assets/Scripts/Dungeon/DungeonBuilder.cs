@@ -353,7 +353,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         // Iterate through all rooms
         foreach (KeyValuePair<string, Room> keyvaluepair in dungeonBuilderRoomDictionary)
         {
+            Room room = keyvaluepair.Value;
 
+            // skip if same room as room to test or room hasn't been positioned
+            if (Room.id == roomToTest.id || !Room.)
         }
     }
 
