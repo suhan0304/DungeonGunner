@@ -291,16 +291,16 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
 
             case Orientation.east:
-
+                adjustment = new Vector2Int(-1, 0);
                 break;
 
 
             case Orientation.south:
-
+                adjustment = new Vector2Int(0, 1);
                 break;
 
             case Orientation.west:
-
+                adjustment = new Vector2Int(1, 0);
                 break;
 
             case Orientation.none:
