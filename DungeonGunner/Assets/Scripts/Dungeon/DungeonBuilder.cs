@@ -357,13 +357,37 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
             // skip if same room as room to test or room hasn't been positioned
             if (room.id == roomToTest.id || !room.isPositioned)
-                continue;
+                continue;room
 
             // If room overlaps
             if (IsOverLapingRoom(roomToTest, room))
             {
                 return room;
             }
+        }
+    }
+
+    /// <summary>
+    /// Check if 2 rooms overlap each other - return true if they overlap or false if they don't overlap 
+    /// </summary>
+
+    private bool IsOverLapingRoom(Room room1, Room room2)
+    {
+    }
+
+    /// <summary>
+    /// Check fi interval 1 overlaps interval 2 - this method is used by the IsOverLappingRoom method
+    /// </summary>
+
+    private bool IsOverLappingInterval(int imin1, int imax1, int imin2, int imax2)
+    {
+        if(Mathf.Max(imin1, imin2) <= Mathf.Min(imax1, imax2))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
