@@ -346,6 +346,19 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     }
 
     /// <summary>
+    /// Check for rooms that overlap the upper and lower bounds parameters, and if there are overlapping rooms then room else return null
+    /// </summary>
+    private Room CheckForRoomOverlap(Room roomToTest)
+    {
+        // Iterate through all rooms
+        foreach (KeyValuePair<string, Room> keyvaluepair in dungeonBuilderRoomDictionary)
+        {
+
+        }
+    }
+
+
+    /// <summary>
     /// Get unconnected doorways
     /// </summary>
     private IEnumerable<Doorway> GetUnconnectedAvailableDoorways(List<Doorway> roomDoorwayList)
