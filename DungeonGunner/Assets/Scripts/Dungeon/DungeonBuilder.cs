@@ -323,7 +323,14 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     /// </summary>
     private Doorway GetOppositeDoorway(Doorway parentDoorway, List<Doorway> doorwayList)
     {
-
+        foreach (Doorway doorwayToCheck in doorwayList)
+        {
+            if (parentDoorway.orientation == Orientation.east && doorwayToCheck.orientation == Orientation.west)
+            {
+                return doorwayToCheck;
+            }
+            else 
+        }
     }
 
     /// <summary>
