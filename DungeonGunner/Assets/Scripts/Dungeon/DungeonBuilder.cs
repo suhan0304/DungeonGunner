@@ -302,6 +302,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             case Orientation.west:
 
                 break;
+
+            case Orientation.none:
+
+                break;
         }
     }
 
