@@ -286,7 +286,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         switch(doorway.orientation)
         {
             case Orientation.north:
-
+                adjustment = new Vector2Int(0, -1);
                 break;
 
 
