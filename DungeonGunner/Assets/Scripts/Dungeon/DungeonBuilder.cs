@@ -277,6 +277,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
         // Calculate 'world' grid parent doorway position
         Vector2Int parentDoorwayPosition = parentRoom.lowerBounds + doorwayParent.position - parentRoom.templateLowerBounds;
+
+        Vector2Int adjustment = Vector2Int.zero;
     }
 
     /// <summary>
