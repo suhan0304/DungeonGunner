@@ -556,8 +556,6 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     /// <summary>
     /// Get a room template by room tmeplate ID, returns null if ID doesn't exist
     /// </summary>
-    /// <param name="roomTemplateID"></param>
-    /// <returns></returns>
     public RoomTemplateSO GetRoomTemplate(string roomTemplateID)
     {
         if (roomTemplateDictionary.TryGetValue(roomTemplateID, out RoomTemplateSO roomTemplate))
@@ -570,6 +568,20 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         }
     }
 
+    /// <summary>
+    /// Get a room template by room tmeplate ID, returns null if ID doesn't exist
+    /// </summary>
+    public RoomTemplateSO GetRoomTemplate(string roomTemplateID)
+    {
+        if (roomTemplateDictionary.TryGetValue(roomTemplateID, out RoomTemplateSO roomTemplate))
+        {
+            return roomTemplate;
+        }
+        else
+        {
+            return null;
+        }
+    }
 
     /// <summary>
     /// Clear dungeon room gameobjects and dungeon room dictionary
