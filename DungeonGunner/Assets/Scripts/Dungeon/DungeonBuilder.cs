@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -558,7 +559,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         {
             return roomTemplate;
         }
-
+        else
+        {
+            return null;
+        }
     }
 
 
