@@ -550,11 +550,14 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         }
 
         return newDoorwayList;
-    }
+    } 
 
     public RoomTemplateSO GetRoomTemplate(string roomTemplateID)
     {
+        if (roomTemplateDictionary.TryGetValue(roomTemplateID, out RoomTemplateSO roomTemplate))
+        {
 
+        }
     }
 
 
