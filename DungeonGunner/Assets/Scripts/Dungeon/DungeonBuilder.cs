@@ -219,6 +219,9 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
                 // Mark room as positioned
                 room.isPositioned = true;
+
+                // Add room to dictionary
+                dungeonBuilderRoomDictionary.Add(room.id, room);
             }
 
         }
