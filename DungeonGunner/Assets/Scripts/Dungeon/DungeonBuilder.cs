@@ -223,7 +223,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                 // Add room to dictionary
                 dungeonBuilderRoomDictionary.Add(room.id, room);
             }
-
+            else
+            {
+                roomOverlaps = true;
+            }
         }
     }
 
