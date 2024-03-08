@@ -217,7 +217,8 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                 // If room doesn't overlap then set to false to exit while loop
                 roomOverlaps = false;
 
-
+                // Mark room as positioned
+                room.isPositioned = true;
             }
 
         }
