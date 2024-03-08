@@ -556,8 +556,9 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     {
         if (roomTemplateDictionary.TryGetValue(roomTemplateID, out RoomTemplateSO roomTemplate))
         {
-
+            return roomTemplate;
         }
+
     }
 
 
