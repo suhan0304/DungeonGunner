@@ -577,6 +577,10 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         {
             return room;
         }
+        else
+        {
+            return null;
+        }
     }
 
     /// <summary>
