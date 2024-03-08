@@ -571,9 +571,12 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     /// <summary>
     /// Get room by roomID, if no room exists with that ID return null
     /// </summary>
-    public RoomTemplateSO GetRoomByRoomID(string roomID)
+    public Room GetRoomByRoomID(string roomID)
     {
-
+        if (dungeonBuilderRoomDictionary.TryGetValue(roomID, out Room room))
+        {
+            return room;
+        }
     }
 
     /// <summary>
