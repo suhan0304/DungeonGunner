@@ -73,6 +73,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
                 InstantiateRoomGameobjects();
             }
         }
+        return dungeonBuildSuccessful;
     }
 
     /// <summary>
@@ -276,7 +277,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     private bool PlaceTheRoom(Room parentRoom, Doorway doorwayParent, Room room)
     {
         // Get current room doorway position
-        Doorway doorway = GetOppositeDoorway(doorwayPoint, room.doorWayList);
+        Doorway doorway = GetOppositeDoorway(doorwayParent, room.doorWayList);
 
         // Returns if no doorway in room opposite to parent doorway
         if (doorway == null)
@@ -563,6 +564,14 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
         return newDoorwayList;
     } 
+
+    /// <summary>
+    /// Instantiate the dungeon room gameobjects from the prefabs
+    /// </summary>
+    private void InstantiateRoomGameobjects()
+    {
+
+    }
 
     /// <summary>
     /// Get a room template by room tmeplate ID, returns null if ID doesn't exist
