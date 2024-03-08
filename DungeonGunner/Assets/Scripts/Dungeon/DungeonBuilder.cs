@@ -214,6 +214,9 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
             // Plcae the room - returns true if the room doesn't overlap
             if (PlaceTheRoom(parentRoom, doorwayParent, room))
             {
+                // If room doesn't overlap then set to false to exit while loop
+                roomOverlaps = false;
+
 
             }
 
