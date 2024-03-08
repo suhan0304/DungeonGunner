@@ -569,7 +569,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     }
 
     /// <summary>
-    /// Get a room template by room tmeplate ID, returns null if ID doesn't exist
+    /// Get room by roomID, if no room exists with that ID return null
     /// </summary>
     public RoomTemplateSO GetRoomTemplate(string roomTemplateID)
     {
