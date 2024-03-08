@@ -552,6 +552,12 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
         return newDoorwayList;
     }
 
+    public RoomTemplateSO GetRoomTemplate(string roomTemplateID)
+    {
+
+    }
+
+
     /// <summary>
     /// Clear dungeon room gameobjects and dungeon room dictionary
     /// </summary>
